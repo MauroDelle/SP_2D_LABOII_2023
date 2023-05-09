@@ -172,7 +172,7 @@
             // dgvCarrito
             // 
             this.dgvCarrito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCarrito.Location = new System.Drawing.Point(657, 123);
+            this.dgvCarrito.Location = new System.Drawing.Point(649, 123);
             this.dgvCarrito.Name = "dgvCarrito";
             this.dgvCarrito.ReadOnly = true;
             this.dgvCarrito.RowTemplate.Height = 25;
@@ -183,7 +183,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::Formularios.Properties.Resources.download1;
-            this.pictureBox4.Location = new System.Drawing.Point(645, 145);
+            this.pictureBox4.Location = new System.Drawing.Point(637, 145);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(481, 277);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -193,7 +193,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::Formularios.Properties.Resources.neon_orange_color_solid_background_1920x1080;
-            this.pictureBox5.Location = new System.Drawing.Point(632, 154);
+            this.pictureBox5.Location = new System.Drawing.Point(624, 154);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(479, 278);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -213,7 +213,7 @@
             // groupBox2
             // 
             this.groupBox2.Font = new System.Drawing.Font("Bebas Neue", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox2.Location = new System.Drawing.Point(622, 103);
+            this.groupBox2.Location = new System.Drawing.Point(614, 103);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(512, 329);
             this.groupBox2.TabIndex = 25;
@@ -298,7 +298,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1138, 565);
+            this.ClientSize = new System.Drawing.Size(1135, 565);
             this.Controls.Add(this.btnComprar);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);

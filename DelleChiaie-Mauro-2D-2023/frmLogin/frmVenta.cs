@@ -168,6 +168,7 @@ namespace Formularios
                 }
             }
         }
+
         private void btnComprar_Click(object sender, EventArgs e)
         {
             if (cliente.CarritoDeProductos.Count == 0 || cliente.Saldo < 900)
@@ -181,9 +182,18 @@ namespace Formularios
                     bool esPagoConCredito = radioButtonCredito.Checked;
                     cliente.RealizarCompra(esPagoConCredito, cliente.CarritoDeProductos, _vendedor.ListaProductos);
                     MessageBox.Show("Compra realizada con éxito.");
+                    dataGridView1.DataSource = null;
+                    dataGridView1.DataSource = _vendedor.ListaProductos;
                     MessageBox.Show(cliente.Mostrar());
                     // refresco la fuente de datos en la interfaz de usuario
                     textBox1.Text = cliente.Saldo.ToString();
+                    for (int i = 0; i < _vendedor.ListaProductos.Count; i++)
+                    {
+                        if (_vendedor.ListaProductos[i].CantidadEnKilos == 0)
+                        {
+                            _vendedor.ListaProductos.RemoveAt(i);
+                        }
+                    }
                     dataGridView1.DataSource = null;
                     dataGridView1.DataSource = _vendedor.ListaProductos;
                 }

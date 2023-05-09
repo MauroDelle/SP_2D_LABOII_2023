@@ -110,14 +110,28 @@ namespace Entidades
             DateTime fechaVenta = DateTime.Now;
             double monto = CalcularMontoTotal(esPagoConCredito, carritoDeProductos);
 
-            foreach (Producto productos in ListaProductos)
+            foreach (Producto productoCarro in carritoDeProductos)
             {
-                foreach (Producto productosCarro in carritoDeProductos)
+                Producto producto = null;
+                foreach (Producto p in ListaProductos)
                 {
-                    if (productos.Equals(productosCarro))
+                    if (p.Equals(productoCarro))
                     {
-                        productos.CantidadEnKilos -= productosCarro.CantidadEnKilos;
+                        producto = p;
+                        break;
                     }
+                }
+                if (producto == null)
+                {
+                    throw new Exception($"El producto {productoCarro.Nombre} no se encuentra en el inventario.");
+                }
+                else if (producto.CantidadEnKilos < productoCarro.CantidadEnKilos)
+                {
+                    throw new Exception($"No hay suficiente stock para el producto {productoCarro.Nombre}. Stock disponible: {producto.CantidadEnKilos} kg.");
+                }
+                else
+                {
+                    producto.CantidadEnKilos -= productoCarro.CantidadEnKilos;
                 }
             }
 
