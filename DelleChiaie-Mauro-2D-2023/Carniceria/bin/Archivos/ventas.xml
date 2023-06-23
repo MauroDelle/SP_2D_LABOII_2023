@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfVenta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Venta>
+    <FechaVenta>2023-06-22T21:46:56.8485471-03:00</FechaVenta>
+    <Cantidad>2</Cantidad>
+    <PrecioTotal>1000</PrecioTotal>
+    <Producto>
+      <Nombre>Asado</Nombre>
+      <PrecioPorKilo>500</PrecioPorKilo>
+      <CantidadEnKilos>2</CantidadEnKilos>
+      <TipoCorte>Vacuno</TipoCorte>
+      <Id>1</Id>
+    </Producto>
+  </Venta>
+  <Venta>
+    <FechaVenta>2023-06-22T21:46:56.8485471-03:00</FechaVenta>
+    <Cantidad>4</Cantidad>
+    <PrecioTotal>2000</PrecioTotal>
+    <Producto>
+      <Nombre>Matambre</Nombre>
+      <PrecioPorKilo>500</PrecioPorKilo>
+      <CantidadEnKilos>4</CantidadEnKilos>
+      <TipoCorte>Vacuno</TipoCorte>
+      <Id>4</Id>
+    </Producto>
+  </Venta>
+  <Venta>
+    <FechaVenta>2023-06-22T21:46:56.8485471-03:00</FechaVenta>
+    <Cantidad>1</Cantidad>
+    <PrecioTotal>380</PrecioTotal>
+    <Producto>
+      <Nombre>Chuletas de Cerdo</Nombre>
+      <PrecioPorKilo>380</PrecioPorKilo>
+      <CantidadEnKilos>1</CantidadEnKilos>
+      <TipoCorte>Cerdo</TipoCorte>
+      <Id>8</Id>
+    </Producto>
+  </Venta>
+  <Venta>
+    <FechaVenta>2023-06-22T21:46:56.8485471-03:00</FechaVenta>
+    <Cantidad>4</Cantidad>
+    <PrecioTotal>1200</PrecioTotal>
+    <Producto>
+      <Nombre>Pollo</Nombre>
+      <PrecioPorKilo>300</PrecioPorKilo>
+      <CantidadEnKilos>4</CantidadEnKilos>
+      <TipoCorte>Ave</TipoCorte>
+      <Id>23</Id>
+    </Producto>
+  </Venta>
+</ArrayOfVenta>

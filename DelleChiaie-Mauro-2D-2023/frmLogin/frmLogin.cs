@@ -17,47 +17,60 @@ namespace frmLogin
         private void button1_Click(object sender, EventArgs e)
         {
             string correo = textBox1.Text;
-            string constrasenia = textBox2.Text;
+            string contrasenia = textBox2.Text;
+            bool esVendedor;
             Login login = new Login();
-            Vendedor vendedor = new Vendedor();
-            System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"PS2-Startup-Screen-QuickSounds.com.wav");
 
-            bool inicioSesionExitoso = login.RedirigirUsuario(correo, constrasenia);  
-
-            if(inicioSesionExitoso)
+            if (string.IsNullOrEmpty(correo) || string.IsNullOrEmpty(contrasenia))
             {
-                if(login.UsuarioActual.EsVendedor())
+                MessageBox.Show("Ingrese el correo y la contraseña.");
+                return;
+            }
+
+            try
+            {
+                bool autenticado = login.AutenticarUsuario(correo, contrasenia, out esVendedor);
+
+                if (autenticado)
                 {
-                    frmHeladera heladera = new frmHeladera();
-                    player.Play();
-                    heladera.Show();
-                    this.Hide();
+                    //Aqui la logica de inicio de sesion
+                    if (esVendedor)
+                    {
+                        // Acciones para un vendedor
+                        MessageBox.Show("Bienvenido Vendedor");
+                        frmHeladera frmHeladera = new frmHeladera();
+                        frmHeladera.Show();
+                    }
+                    else
+                    {
+                        frmVenta frmVenta = new frmVenta();
+                        MessageBox.Show("Bienvenido Cliente");
+                        frmVenta.Show();
+                    }
                 }
                 else
                 {
-                    frmVenta venta = new frmVenta(vendedor);
-                    player.Play();
-                    venta.Show();
-                    this.Hide();
+                    MessageBox.Show("Credenciales inválidas. Por favor, verifique el correo y la contraseña.");
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Correo o constraseña incorrectos");
+                // Mostrar mensaje de error genérico en caso de excepción
+                MessageBox.Show("Error en el inicio de sesión: " + ex.Message);
             }
         }
         private void AutocompletarVendedor()
         {
-            textBox1.Text = "juan@gmail.com";
-            textBox2.Text = "vendedorvendedor1";
+            textBox1.Text = "pepito@mail.com";
+            textBox2.Text = "pepito123";
             button2.Enabled = false;
             textBox2.UseSystemPasswordChar = true;
             button3.Enabled = true;
         }
         private void AutocompletarCliente()
         {
-            textBox1.Text = "mauro@gmail.com";
-            textBox2.Text = "clientecliente1";
+            textBox1.Text = "mauro@mail.com";
+            textBox2.Text = "mauro123";
             textBox2.UseSystemPasswordChar = true;
             button2.Enabled = true;
             button3.Enabled = false;
@@ -102,6 +115,38 @@ namespace frmLogin
         {
 
         }
+
+        #region Parte Vieja
+        //string correo = textBox1.Text;
+        //string constrasenia = textBox2.Text;
+        //Login login = new Login();
+        //Vendedor vendedor = new Vendedor();
+
+        //bool inicioSesionExitoso = login.RedirigirUsuario(correo, constrasenia);  
+
+        //if(inicioSesionExitoso)
+        //{
+        //    if(login.UsuarioActual.ClienteOVendedor())
+        //    {
+        //        frmHeladera heladera = new frmHeladera();
+        //        heladera.Show();
+        //        this.Hide();
+        //    }
+        //    else
+        //    {
+        //        frmVenta venta = new frmVenta(vendedor);
+        //        venta.Show();
+        //        this.Hide();
+        //    }
+        //}
+        //else
+        //{
+        //    MessageBox.Show("Correo o constraseña incorrectos");
+        //}
+        #endregion
+
+
+
         #endregion
     }
 }

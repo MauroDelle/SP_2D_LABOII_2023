@@ -29,70 +29,78 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHistorialVenta));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(76, 31);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(490, 336);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            pictureBox2 = new PictureBox();
+            pictureBox1 = new PictureBox();
+            textBoxHistorial = new TextBox();
+            btnSerializarJson = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Formularios.Properties.Resources.download1;
-            this.pictureBox2.Location = new System.Drawing.Point(49, 41);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(508, 348);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
+            pictureBox2.Image = Properties.Resources.download1;
+            pictureBox2.Location = new Point(49, 41);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(508, 348);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 6;
+            pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Formularios.Properties.Resources.neon_orange_color_solid_background_1920x1080;
-            this.pictureBox1.Location = new System.Drawing.Point(25, 62);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(508, 348);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.Image = Properties.Resources.neon_orange_color_solid_background_1920x1080;
+            pictureBox1.Location = new Point(25, 62);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(508, 348);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 7;
+            pictureBox1.TabStop = false;
+            // 
+            // textBoxHistorial
+            // 
+            textBoxHistorial.Enabled = false;
+            textBoxHistorial.Location = new Point(81, 22);
+            textBoxHistorial.Multiline = true;
+            textBoxHistorial.Name = "textBoxHistorial";
+            textBoxHistorial.Size = new Size(490, 334);
+            textBoxHistorial.TabIndex = 8;
+            textBoxHistorial.TextChanged += textBoxHistorial_TextChanged;
+            // 
+            // btnSerializarJson
+            // 
+            btnSerializarJson.Location = new Point(595, 22);
+            btnSerializarJson.Name = "btnSerializarJson";
+            btnSerializarJson.Size = new Size(111, 44);
+            btnSerializarJson.TabIndex = 9;
+            btnSerializarJson.Text = "Json";
+            btnSerializarJson.UseVisualStyleBackColor = true;
+            btnSerializarJson.Click += btnSerializarJson_Click;
             // 
             // frmHistorialVenta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(598, 429);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmHistorialVenta";
-            this.Text = "frmHistorialVenta";
-            this.Load += new System.EventHandler(this.frmHistorialVenta_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
+            ClientSize = new Size(718, 429);
+            Controls.Add(btnSerializarJson);
+            Controls.Add(textBoxHistorial);
+            Controls.Add(pictureBox2);
+            Controls.Add(pictureBox1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Name = "frmHistorialVenta";
+            Text = "frmHistorialVenta";
+            Load += frmHistorialVenta_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
-        private DataGridView dataGridView1;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
+        public TextBox textBoxHistorial;
+        private Button btnSerializarJson;
     }
 }

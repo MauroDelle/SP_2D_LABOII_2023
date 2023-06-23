@@ -1,0 +1,61 @@
+
+Fecha de Venta: 22/6/2023 21:46:56
+Producto: ID: 1
+
+Nombre: Asado
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 2
+
+Tipo de Corte: Vacuno
+
+
+Cantidad: 2
+Precio Total: 1000
+---------------
+Fecha de Venta: 22/6/2023 21:46:56
+Producto: ID: 4
+
+Nombre: Matambre
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 4
+
+Tipo de Corte: Vacuno
+
+
+Cantidad: 4
+Precio Total: 2000
+---------------
+Fecha de Venta: 22/6/2023 21:46:56
+Producto: ID: 8
+
+Nombre: Chuletas de Cerdo
+
+Precio por Kilo: 380
+
+Cantidad en Kilos: 1
+
+Tipo de Corte: Cerdo
+
+
+Cantidad: 1
+Precio Total: 380
+---------------
+Fecha de Venta: 22/6/2023 21:46:56
+Producto: ID: 23
+
+Nombre: Pollo
+
+Precio por Kilo: 300
+
+Cantidad en Kilos: 4
+
+Tipo de Corte: Ave
+
+
+Cantidad: 4
+Precio Total: 1200
+---------------

@@ -29,217 +29,309 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHeladera));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.botonVender = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            this.SuspendLayout();
+            dataGridView1 = new DataGridView();
+            botonVender = new Button();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            label1 = new Label();
+            pictureBox3 = new PictureBox();
+            comboBox1 = new ComboBox();
+            numericUpDown1 = new NumericUpDown();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            textBox1 = new TextBox();
+            button1 = new Button();
+            button2 = new Button();
+            textBox2 = new TextBox();
+            label6 = new Label();
+            radioButtonEfectivo = new RadioButton();
+            radioButtonTarjeta = new RadioButton();
+            nuevoProducto = new Button();
+            button3 = new Button();
+            progressBar = new ProgressBar();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            SuspendLayout();
             // 
             // dataGridView1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(29, 161);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(448, 255);
-            this.dataGridView1.TabIndex = 2;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.BackgroundColor = Color.Teal;
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(29, 161);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(448, 255);
+            dataGridView1.TabIndex = 2;
+            dataGridView1.CellClick += dataGridView1_CellClick;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // botonVender
             // 
-            this.botonVender.Location = new System.Drawing.Point(560, 350);
-            this.botonVender.Name = "botonVender";
-            this.botonVender.Size = new System.Drawing.Size(110, 44);
-            this.botonVender.TabIndex = 3;
-            this.botonVender.Text = "Vender";
-            this.botonVender.UseVisualStyleBackColor = true;
-            this.botonVender.Click += new System.EventHandler(this.botonVender_Click);
+            botonVender.Location = new Point(526, 348);
+            botonVender.Name = "botonVender";
+            botonVender.Size = new Size(101, 47);
+            botonVender.TabIndex = 3;
+            botonVender.Text = "Vender";
+            botonVender.UseVisualStyleBackColor = true;
+            botonVender.Click += botonVender_Click;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Formularios.Properties.Resources.download1;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 148);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(484, 289);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.Image = Properties.Resources.download1;
+            pictureBox1.Location = new Point(12, 148);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(484, 289);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 4;
+            pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Formularios.Properties.Resources.download1;
-            this.pictureBox2.Location = new System.Drawing.Point(-3, -2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(736, 65);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
+            pictureBox2.Image = Properties.Resources.download1;
+            pictureBox2.Location = new Point(-3, -2);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(736, 65);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 5;
+            pictureBox2.TabStop = false;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Bebas Neue", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(29, 104);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 41);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Productos";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Bebas Neue", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.Black;
+            label1.Location = new Point(12, 104);
+            label1.Name = "label1";
+            label1.Size = new Size(140, 41);
+            label1.TabIndex = 6;
+            label1.Text = "Productos";
+            label1.Click += label1_Click_1;
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::Formularios.Properties.Resources.download1;
-            this.pictureBox3.Location = new System.Drawing.Point(518, 148);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(193, 289);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 7;
-            this.pictureBox3.TabStop = false;
+            pictureBox3.Image = Properties.Resources.download1;
+            pictureBox3.Location = new Point(518, 148);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(193, 289);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 7;
+            pictureBox3.TabStop = false;
             // 
             // comboBox1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(526, 189);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(168, 23);
-            this.comboBox1.TabIndex = 8;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(526, 189);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(101, 23);
+            comboBox1.TabIndex = 8;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(618, 284);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(91, 23);
-            this.numericUpDown1.TabIndex = 9;
+            numericUpDown1.Location = new Point(618, 284);
+            numericUpDown1.Maximum = new decimal(new int[] { 30, 0, 0, 0 });
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.ReadOnly = true;
+            numericUpDown1.Size = new Size(91, 23);
+            numericUpDown1.TabIndex = 9;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Bebas Neue", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(553, 104);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 41);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Clientes";
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Bebas Neue", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.Black;
+            label2.Location = new Point(553, 104);
+            label2.Name = "label2";
+            label2.Size = new Size(117, 41);
+            label2.TabIndex = 10;
+            label2.Text = "Clientes";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Bebas Kai", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(526, 283);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 24);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "cantidad:";
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Bebas Kai", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.Black;
+            label3.Location = new Point(526, 283);
+            label3.Name = "label3";
+            label3.Size = new Size(86, 24);
+            label3.TabIndex = 12;
+            label3.Text = "cantidad:";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Bebas Kai", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(526, 233);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 24);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "saldo:";
+            label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
+            label4.Font = new Font("Bebas Kai", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = Color.Black;
+            label4.Location = new Point(526, 233);
+            label4.Name = "label4";
+            label4.Size = new Size(61, 24);
+            label4.TabIndex = 13;
+            label4.Text = "saldo:";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Bebas Kai", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(526, 162);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 24);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "nombre:";
+            label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
+            label5.Font = new Font("Bebas Kai", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.ForeColor = Color.Black;
+            label5.Location = new Point(526, 162);
+            label5.Name = "label5";
+            label5.Size = new Size(76, 24);
+            label5.TabIndex = 14;
+            label5.Text = "nombre:";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(593, 234);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(63, 23);
-            this.textBox1.TabIndex = 15;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            textBox1.Location = new Point(593, 234);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(63, 23);
+            textBox1.TabIndex = 15;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(416, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 47);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Historial";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.Location = new Point(502, 12);
+            button1.Name = "button1";
+            button1.Size = new Size(110, 47);
+            button1.TabIndex = 16;
+            button1.Text = "Historial";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(219, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(110, 47);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Reponer";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            button2.Location = new Point(301, 12);
+            button2.Name = "button2";
+            button2.Size = new Size(110, 47);
+            button2.TabIndex = 17;
+            button2.Text = "Reponer";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // textBox2
+            // 
+            textBox2.Enabled = false;
+            textBox2.Location = new Point(661, 189);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(48, 23);
+            textBox2.TabIndex = 18;
+            textBox2.TextChanged += textBox2_TextChanged;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = Color.Transparent;
+            label6.Font = new Font("Bebas Kai", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = Color.Black;
+            label6.Location = new Point(661, 162);
+            label6.Name = "label6";
+            label6.Size = new Size(48, 24);
+            label6.TabIndex = 19;
+            label6.Text = "EDAD";
+            // 
+            // radioButtonEfectivo
+            // 
+            radioButtonEfectivo.BackColor = Color.PowderBlue;
+            radioButtonEfectivo.Location = new Point(632, 348);
+            radioButtonEfectivo.Name = "radioButtonEfectivo";
+            radioButtonEfectivo.Size = new Size(77, 24);
+            radioButtonEfectivo.TabIndex = 20;
+            radioButtonEfectivo.TabStop = true;
+            radioButtonEfectivo.Text = "Efectivo";
+            radioButtonEfectivo.UseVisualStyleBackColor = false;
+            // 
+            // radioButtonTarjeta
+            // 
+            radioButtonTarjeta.BackColor = Color.PowderBlue;
+            radioButtonTarjeta.Location = new Point(632, 371);
+            radioButtonTarjeta.Name = "radioButtonTarjeta";
+            radioButtonTarjeta.Size = new Size(77, 24);
+            radioButtonTarjeta.TabIndex = 21;
+            radioButtonTarjeta.TabStop = true;
+            radioButtonTarjeta.Text = "Tarjeta";
+            radioButtonTarjeta.UseVisualStyleBackColor = false;
+            // 
+            // nuevoProducto
+            // 
+            nuevoProducto.Location = new Point(87, 12);
+            nuevoProducto.Name = "nuevoProducto";
+            nuevoProducto.Size = new Size(110, 47);
+            nuevoProducto.TabIndex = 22;
+            nuevoProducto.Text = "Agregar Corte";
+            nuevoProducto.UseVisualStyleBackColor = true;
+            nuevoProducto.Click += nuevoProducto_Click;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(585, 313);
+            button3.Name = "button3";
+            button3.Size = new Size(71, 28);
+            button3.TabIndex = 23;
+            button3.Text = "Actualizar";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // progressBar
+            // 
+            progressBar.BackColor = SystemColors.ActiveBorder;
+            progressBar.Location = new Point(430, 104);
+            progressBar.Maximum = 15;
+            progressBar.Name = "progressBar";
+            progressBar.Size = new Size(66, 38);
+            progressBar.TabIndex = 24;
+            progressBar.Click += progressBar_Click;
             // 
             // frmHeladera
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(722, 447);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.botonVender);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pictureBox3);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmHeladera";
-            this.Text = "Heladera";
-            this.Load += new System.EventHandler(this.frmHeladera_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
+            ClientSize = new Size(723, 447);
+            Controls.Add(progressBar);
+            Controls.Add(button3);
+            Controls.Add(nuevoProducto);
+            Controls.Add(radioButtonTarjeta);
+            Controls.Add(radioButtonEfectivo);
+            Controls.Add(label6);
+            Controls.Add(textBox2);
+            Controls.Add(button2);
+            Controls.Add(botonVender);
+            Controls.Add(button1);
+            Controls.Add(textBox1);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(numericUpDown1);
+            Controls.Add(comboBox1);
+            Controls.Add(label1);
+            Controls.Add(pictureBox2);
+            Controls.Add(dataGridView1);
+            Controls.Add(pictureBox1);
+            Controls.Add(pictureBox3);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Name = "frmHeladera";
+            Text = "Heladera";
+            Load += frmHeladera_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -258,5 +350,12 @@
         private TextBox textBox1;
         private Button button1;
         private Button button2;
+        private TextBox textBox2;
+        private Label label6;
+        private RadioButton radioButtonEfectivo;
+        private RadioButton radioButtonTarjeta;
+        private Button nuevoProducto;
+        private Button button3;
+        private ProgressBar progressBar;
     }
 }
