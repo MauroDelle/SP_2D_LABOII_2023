@@ -14,7 +14,7 @@ namespace Entidades
 {
     public static class Serializador
     {
-        public static void SerializarEnJson(List<Venta> ventas, string rutaArchivo)
+        public static void SerializarEnJson(Venta ventas, string rutaArchivo)
         {
             try
             {
