@@ -19,8 +19,6 @@ namespace Formularios
         public frmHistorialVenta(List<Venta> historialVentas)
         {
             InitializeComponent();
-
-
             this.historialVentas = historialVentas;
         }
 
@@ -45,7 +43,7 @@ namespace Formularios
             string nombreArchivo = "historial_ventas.json";
             string rutaArchivoJson = Path.Combine(@"C:\Users\delle\OneDrive\Escritorio\PP_2D_LABOII_2023\DelleChiaie-Mauro-2D-2023\Carniceria\bin\Archivos", nombreArchivo);
 
-            Serializador.SerializarEnJson(historialVentas, rutaArchivoJson);
+            Serializador.SerializarEnJson(this.historialVentas, rutaArchivoJson);
 
             MessageBox.Show("Serialización en JSON realizada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
