@@ -18,11 +18,20 @@ namespace Entidades
         {
             try
             {
-                // Serializar la lista de ventas en formato JSON
-                string json = JsonConvert.SerializeObject(ventas, Newtonsoft.Json.Formatting.Indented);
+                // Leer el contenido actual del archivo JSON
+                string json = File.ReadAllText(rutaArchivo);
 
-                // Escribir el JSON en un archivo
-                File.WriteAllText(rutaArchivo, json);
+                // Deserializar el JSON existente en una lista de ventas
+                List<Venta> ventasExistentes = JsonConvert.DeserializeObject<List<Venta>>(json);
+
+                // Agregar la nueva venta a la lista
+                ventasExistentes.Add(ventas);
+
+                // Serializar la lista actualizada de ventas en formato JSON
+                string jsonActualizado = JsonConvert.SerializeObject(ventasExistentes, Newtonsoft.Json.Formatting.Indented);
+
+                // Escribir el JSON actualizado en el archivo
+                File.WriteAllText(rutaArchivo, jsonActualizado);
             }
             catch (Exception ex)
             {

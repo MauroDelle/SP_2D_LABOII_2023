@@ -86,9 +86,7 @@ namespace Entidades
                             ActualizarCantidadProductoEvent?.Invoke(producto);
                             Venta venta = new Venta(producto, cantidad, montoFinal, DateTime.Now);
                             ArchivoTexto.GuardarHistorialVentaEnTxt(venta, @"C:\Users\delle\OneDrive\Escritorio\PP_2D_LABOII_2023\DelleChiaie-Mauro-2D-2023\Carniceria\bin\Debug\net6.0\historial_ventas.txt");
-                            string nombreArchivo = "historial_ventas.json";
-                            string rutaArchivoJson = Path.Combine(@"C:\Users\delle\OneDrive\Escritorio\PP_2D_LABOII_2023\DelleChiaie-Mauro-2D-2023\Carniceria\bin\Archivos", nombreArchivo);
-                            Serializador.SerializarEnJson(venta,rutaArchivoJson);
+                            Serializador.SerializarEnJson(venta, @"C:\Users\delle\OneDrive\Escritorio\PP_2D_LABOII_2023\DelleChiaie-Mauro-2D-2023\Carniceria\bin\Archivos\historial_ventas.json");
                             return true; // La venta se realizó correctamente
                         }
                     }

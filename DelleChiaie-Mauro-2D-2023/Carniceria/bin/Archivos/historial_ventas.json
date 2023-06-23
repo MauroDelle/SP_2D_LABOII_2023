@@ -1,12 +1,12 @@
 {
-  "FechaVenta": "2023-06-23T11:53:58.0451087-03:00",
-  "Cantidad": 2.0,
-  "PrecioTotal": 1000.0,
+  "FechaVenta": "2023-06-23T11:59:46.332599-03:00",
+  "Cantidad": 5.0,
+  "PrecioTotal": 2100.0,
   "Producto": {
-    "Nombre": "Asado",
-    "PrecioPorKilo": 500.0,
-    "CantidadEnKilos": 0.0,
-    "TipoCorte": "Vacuno",
-    "Id": 1
+    "Nombre": "Pechito de Cerdo",
+    "PrecioPorKilo": 400.0,
+    "CantidadEnKilos": 6.0,
+    "TipoCorte": "Cerdo",
+    "Id": 7
   }
 }
