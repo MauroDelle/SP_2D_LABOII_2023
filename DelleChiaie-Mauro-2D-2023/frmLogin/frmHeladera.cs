@@ -78,7 +78,7 @@ namespace Formularios
 
             Cliente clienteSeleccionado = comboBox1.SelectedItem as Cliente;
 
-            Vendedor vendedor = new Vendedor();
+            //Vendedor vendedor = new Vendedor();
             bool ventaExitosa = vendedor.Vender(productoSeleccionado, clienteSeleccionado, cantidad, esEfectivo);
 
             if (ventaExitosa)
@@ -172,7 +172,7 @@ namespace Formularios
         private void button1_Click(object sender, EventArgs e)
         {
             string contenido = ArchivoTexto.ObtenerContenido(@"C:\Users\delle\OneDrive\Escritorio\PP_2D_LABOII_2023\DelleChiaie-Mauro-2D-2023\Carniceria\bin\Debug\net6.0\historial_ventas.txt");
-            frmHistorialVenta formHistorial = new frmHistorialVenta(vendedor.HistorialVentas);
+            frmHistorialVenta formHistorial = new frmHistorialVenta(vendedor.ObtenerHistorialVenta());
             formHistorial.textBoxHistorial.Text = contenido;
             formHistorial.ShowDialog();
         }

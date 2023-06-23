@@ -1,42 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml;
+﻿using System.Xml;
 using System.Xml.Serialization;
 using System.Text.Json;
-using System.Data;
-using System.IO;
 using Newtonsoft.Json;
 
 namespace Entidades
 {
     public static class Serializador
     {
-        public static void SerializarEnJson(Venta ventas, string rutaArchivo)
+        public static bool SerializarEnJson(List<Venta> ventas)
         {
+            bool esValido = false;
+
             try
             {
-                // Leer el contenido actual del archivo JSON
-                string json = File.ReadAllText(rutaArchivo);
+                string rutaArchivo = @"C:\Users\delle\OneDrive\Escritorio\PP_2D_LABOII_2023\DelleChiaie-Mauro-2D-2023\Carniceria\bin\Archivos\ventas.json";
 
-                // Deserializar el JSON existente en una lista de ventas
-                List<Venta> ventasExistentes = JsonConvert.DeserializeObject<List<Venta>>(json);
-
-                // Agregar la nueva venta a la lista
-                ventasExistentes.Add(ventas);
-
-                // Serializar la lista actualizada de ventas en formato JSON
-                string jsonActualizado = JsonConvert.SerializeObject(ventasExistentes, Newtonsoft.Json.Formatting.Indented);
-
-                // Escribir el JSON actualizado en el archivo
-                File.WriteAllText(rutaArchivo, jsonActualizado);
+                // Crear o abrir el archivo JSON en modo de escritura
+                using (StreamWriter writer = new StreamWriter(rutaArchivo, true))
+                {
+                    // Serializar cada venta por separado y escribirla en el archivo
+                    foreach (Venta venta in ventas)
+                    {
+                        string json = JsonConvert.SerializeObject(venta);
+                        writer.WriteLine(json);
+                        writer.WriteLine(); // Agregar una línea vacía como separador
+                    }
+                }
+                esValido = true;
             }
             catch (Exception ex)
             {
-                throw new Exception($"Error al serializar en JSON: {ex.Message}", ex);
+                esValido = false;
+                throw new Exception(ex.Message);
             }
+
+            return esValido;
         }
 
         public static void SerializarXml(List<Venta> ventasRealizadas)
@@ -54,9 +52,6 @@ namespace Entidades
                 serializer.Serialize(fileStream, ventasRealizadas);
             }
         }
-
-
-
 
     }
 }

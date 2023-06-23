@@ -33,6 +33,8 @@
             pictureBox1 = new PictureBox();
             textBoxHistorial = new TextBox();
             btnSerializarJson = new Button();
+            button1 = new Button();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -59,7 +61,6 @@
             // 
             // textBoxHistorial
             // 
-            textBoxHistorial.Enabled = false;
             textBoxHistorial.Location = new Point(81, 22);
             textBoxHistorial.Multiline = true;
             textBoxHistorial.Name = "textBoxHistorial";
@@ -77,12 +78,34 @@
             btnSerializarJson.UseVisualStyleBackColor = true;
             btnSerializarJson.Click += btnSerializarJson_Click;
             // 
+            // button1
+            // 
+            button1.Location = new Point(595, 263);
+            button1.Name = "button1";
+            button1.Size = new Size(111, 44);
+            button1.TabIndex = 10;
+            button1.Text = "Des.Json";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(595, 192);
+            button2.Name = "button2";
+            button2.Size = new Size(111, 44);
+            button2.TabIndex = 11;
+            button2.Text = "Des.Xml";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // frmHistorialVenta
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(718, 429);
+            Controls.Add(button2);
+            Controls.Add(button1);
             Controls.Add(btnSerializarJson);
             Controls.Add(textBoxHistorial);
             Controls.Add(pictureBox2);
@@ -102,5 +125,7 @@
         private PictureBox pictureBox1;
         public TextBox textBoxHistorial;
         private Button btnSerializarJson;
+        private Button button1;
+        private Button button2;
     }
 }

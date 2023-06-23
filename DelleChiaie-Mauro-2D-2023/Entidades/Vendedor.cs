@@ -12,7 +12,7 @@ namespace Entidades
     {
         #region ATRIBUTOS
 
-        List<Venta> historialVentas;
+        private List<Venta> historialVentas;
         private DescuentoRecargoDelegate descuentoRecargoDelegate;
         public event Action<Producto> ActualizarCantidadProductoEvent;
         #endregion
@@ -22,14 +22,14 @@ namespace Entidades
         public Vendedor() : base(0, "", "", "", 0, 0)
         {
             // Constructor vacío
-            historialVentas = new List<Venta>();
+            this.historialVentas = new List<Venta>();
         }
 
-        public Vendedor(int id,string nombre,string correo,string constrasenia,int idPersona,int idCliente,DescuentoRecargoDelegate descuentoRecargoDelegate):base(id,nombre,correo,constrasenia,idPersona,idCliente)
-        {
-            this.descuentoRecargoDelegate = descuentoRecargoDelegate;    
-            this.historialVentas= new List<Venta>();
-        }
+        //public Vendedor(int id,string nombre,string correo,string constrasenia,int idPersona,int idCliente,DescuentoRecargoDelegate descuentoRecargoDelegate):base(id,nombre,correo,constrasenia,idPersona,idCliente)
+        //{
+        //    this.descuentoRecargoDelegate = descuentoRecargoDelegate;    
+        //    this.historialVentas= new List<Venta>();
+        //}
 
         //public Vendedor():this("Sin nombre", "Sin correo", "Sin contraseña",true)
         //{ 
@@ -86,7 +86,7 @@ namespace Entidades
                             ActualizarCantidadProductoEvent?.Invoke(producto);
                             Venta venta = new Venta(producto, cantidad, montoFinal, DateTime.Now);
                             ArchivoTexto.GuardarHistorialVentaEnTxt(venta, @"C:\Users\delle\OneDrive\Escritorio\PP_2D_LABOII_2023\DelleChiaie-Mauro-2D-2023\Carniceria\bin\Debug\net6.0\historial_ventas.txt");
-                            Serializador.SerializarEnJson(venta, @"C:\Users\delle\OneDrive\Escritorio\PP_2D_LABOII_2023\DelleChiaie-Mauro-2D-2023\Carniceria\bin\Archivos\historial_ventas.json");
+                            AgregarVenta(venta);
                             return true; // La venta se realizó correctamente
                         }
                     }
@@ -104,7 +104,7 @@ namespace Entidades
 
         public void AgregarVenta(Venta venta)
         {
-            historialVentas.Add(venta);
+            HistorialVentas.Add(venta);
         }
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace Entidades
         /// <returns>Una lista de objetos de tipo Venta que representan el historial de ventas realizadas por el vendedor.</returns>
         public List<Venta> ObtenerHistorialVenta()
         {
-            return this.historialVentas;
+            return this.HistorialVentas;
         }
         #endregion
     }

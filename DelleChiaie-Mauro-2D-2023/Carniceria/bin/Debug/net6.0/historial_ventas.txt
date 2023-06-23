@@ -252,3 +252,723 @@ Tipo de Corte: Cerdo
 Precio Total: 840
 
 
+Historial:
+Fecha de Venta: 23/6/2023 12:09:53
+
+Producto: ID: 6
+
+Nombre: Bondiola
+
+Precio por Kilo: 350
+
+Cantidad en Kilos: 2
+
+Tipo de Corte: Cerdo
+
+
+
+Precio Total: 700
+
+
+Historial:
+Fecha de Venta: 23/6/2023 12:11:38
+
+Producto: ID: 6
+
+Nombre: Bondiola
+
+Precio por Kilo: 350
+
+Cantidad en Kilos: 1
+
+Tipo de Corte: Cerdo
+
+
+
+Precio Total: 280
+
+
+Historial:
+Fecha de Venta: 23/6/2023 12:13:00
+
+Producto: ID: 8
+
+Nombre: Chuletas de Cerdo
+
+Precio por Kilo: 380
+
+Cantidad en Kilos: 9
+
+Tipo de Corte: Cerdo
+
+
+
+Precio Total: 760
+
+
+Historial:
+Fecha de Venta: 23/6/2023 12:19:31
+
+Producto: ID: 7
+
+Nombre: Pechito de Cerdo
+
+Precio por Kilo: 400
+
+Cantidad en Kilos: 4
+
+Tipo de Corte: Cerdo
+
+
+
+Precio Total: 800
+
+
+Historial:
+Fecha de Venta: 23/6/2023 12:19:38
+
+Producto: ID: 9
+
+Nombre: Costillar de Cerdo
+
+Precio por Kilo: 420
+
+Cantidad en Kilos: 10
+
+Tipo de Corte: Cerdo
+
+
+
+Precio Total: 2205
+
+
+Historial:
+Fecha de Venta: 23/6/2023 12:20:02
+
+Producto: ID: 26
+
+Nombre: Pechito
+
+Precio por Kilo: 200
+
+Cantidad en Kilos: 0
+
+Tipo de Corte: Ave
+
+
+
+Precio Total: 630
+
+
+Historial:
+Fecha de Venta: 23/6/2023 12:20:46
+
+Producto: ID: 29
+
+Nombre: Costillitas de cerdo
+
+Precio por Kilo: 200
+
+Cantidad en Kilos: 9
+
+Tipo de Corte: Cerdo
+
+
+
+Precio Total: 1200
+
+
+Historial:
+Fecha de Venta: 23/6/2023 12:20:51
+
+Producto: ID: 27
+
+Nombre: Milanesas de pollo
+
+Precio por Kilo: 200
+
+Cantidad en Kilos: 0
+
+Tipo de Corte: Ave
+
+
+
+Precio Total: 1200
+
+
+Historial:
+Fecha de Venta: 23/6/2023 12:20:54
+
+Producto: ID: 7
+
+Nombre: Pechito de Cerdo
+
+Precio por Kilo: 400
+
+Cantidad en Kilos: 0
+
+Tipo de Corte: Cerdo
+
+
+
+Precio Total: 1600
+
+
+Historial:
+Fecha de Venta: 23/6/2023 12:22:34
+
+Producto: ID: 6
+
+Nombre: Bondiola
+
+Precio por Kilo: 350
+
+Cantidad en Kilos: 0
+
+Tipo de Corte: Cerdo
+
+
+
+Precio Total: 350
+
+
+Historial:
+Fecha de Venta: 23/6/2023 12:22:40
+
+Producto: ID: 8
+
+Nombre: Chuletas de Cerdo
+
+Precio por Kilo: 380
+
+Cantidad en Kilos: 0
+
+Tipo de Corte: Cerdo
+
+
+
+Precio Total: 3420
+
+
+Historial:
+Fecha de Venta: 23/6/2023 12:22:48
+
+Producto: ID: 27
+
+Nombre: Milanesas de pollo
+
+Precio por Kilo: 200
+
+Cantidad en Kilos: 0
+
+Tipo de Corte: Ave
+
+
+
+Precio Total: 400
+
+
+Historial:
+Fecha de Venta: 23/6/2023 12:25:05
+
+Producto: ID: 4
+
+Nombre: Matambre
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 0
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 500
+
+
+Historial:
+Fecha de Venta: 23/6/2023 14:09:27
+
+Producto: ID: 6
+
+Nombre: Bondiola
+
+Precio por Kilo: 350
+
+Cantidad en Kilos: 1
+
+Tipo de Corte: Cerdo
+
+
+
+Precio Total: 4900
+
+
+Historial:
+Fecha de Venta: 23/6/2023 14:10:25
+
+Producto: ID: 8
+
+Nombre: Chuletas de Cerdo
+
+Precio por Kilo: 380
+
+Cantidad en Kilos: 8
+
+Tipo de Corte: Cerdo
+
+
+
+Precio Total: 2660
+
+
+Historial:
+Fecha de Venta: 23/6/2023 14:21:41
+
+Producto: ID: 8
+
+Nombre: Chuletas de Cerdo
+
+Precio por Kilo: 380
+
+Cantidad en Kilos: 0
+
+Tipo de Corte: Cerdo
+
+
+
+Precio Total: 3040
+
+
+Historial:
+Fecha de Venta: 23/6/2023 14:26:17
+
+Producto: ID: 7
+
+Nombre: Pechito de Cerdo
+
+Precio por Kilo: 400
+
+Cantidad en Kilos: 0
+
+Tipo de Corte: Cerdo
+
+
+
+Precio Total: 800
+
+
+Historial:
+Fecha de Venta: 23/6/2023 14:40:41
+
+Producto: ID: 19
+
+Nombre: Asado de Tira
+
+Precio por Kilo: 400
+
+Cantidad en Kilos: 4
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 4400
+
+
+Historial:
+Fecha de Venta: 23/6/2023 14:46:44
+
+Producto: ID: 10
+
+Nombre: Muslos de Pollo
+
+Precio por Kilo: 250
+
+Cantidad en Kilos: 7
+
+Tipo de Corte: Ave
+
+
+
+Precio Total: 2000
+
+
+Historial:
+Fecha de Venta: 23/6/2023 14:47:04
+
+Producto: ID: 4
+
+Nombre: Matambre
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 7
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 4200
+
+
+Historial:
+Fecha de Venta: 23/6/2023 14:49:17
+
+Producto: ID: 5
+
+Nombre: Tira de Asado
+
+Precio por Kilo: 400
+
+Cantidad en Kilos: 0
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 400
+
+
+Historial:
+Fecha de Venta: 23/6/2023 14:49:21
+
+Producto: ID: 6
+
+Nombre: Bondiola
+
+Precio por Kilo: 350
+
+Cantidad en Kilos: 0
+
+Tipo de Corte: Cerdo
+
+
+
+Precio Total: 350
+
+
+Historial:
+Fecha de Venta: 23/6/2023 14:49:30
+
+Producto: ID: 17
+
+Nombre: Colita de Cuadril
+
+Precio por Kilo: 550
+
+Cantidad en Kilos: 0
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 8250
+
+
+Historial:
+Fecha de Venta: 23/6/2023 14:49:48
+
+Producto: ID: 23
+
+Nombre: Pollo
+
+Precio por Kilo: 300
+
+Cantidad en Kilos: 8
+
+Tipo de Corte: Ave
+
+
+
+Precio Total: 945
+
+
+Historial:
+Fecha de Venta: 23/6/2023 14:49:52
+
+Producto: ID: 18
+
+Nombre: Vacio
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 12
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 1500
+
+
+Historial:
+Fecha de Venta: 23/6/2023 14:56:31
+
+Producto: ID: 7
+
+Nombre: Pechito de Cerdo
+
+Precio por Kilo: 400
+
+Cantidad en Kilos: 11
+
+Tipo de Corte: Cerdo
+
+
+
+Precio Total: 1600
+
+
+Historial:
+Fecha de Venta: 23/6/2023 14:56:37
+
+Producto: ID: 8
+
+Nombre: Chuletas de Cerdo
+
+Precio por Kilo: 380
+
+Cantidad en Kilos: 11
+
+Tipo de Corte: Cerdo
+
+
+
+Precio Total: 1520
+
+
+Historial:
+Fecha de Venta: 23/6/2023 14:57:33
+
+Producto: ID: 5
+
+Nombre: Tira de Asado
+
+Precio por Kilo: 400
+
+Cantidad en Kilos: 0
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 400
+
+
+Historial:
+Fecha de Venta: 23/6/2023 14:57:37
+
+Producto: ID: 6
+
+Nombre: Bondiola
+
+Precio por Kilo: 350
+
+Cantidad en Kilos: 0
+
+Tipo de Corte: Cerdo
+
+
+
+Precio Total: 350
+
+
+Historial:
+Fecha de Venta: 23/6/2023 14:59:07
+
+Producto: ID: 8
+
+Nombre: Chuletas de Cerdo
+
+Precio por Kilo: 380
+
+Cantidad en Kilos: 9
+
+Tipo de Corte: Cerdo
+
+
+
+Precio Total: 760
+
+
+Historial:
+Fecha de Venta: 23/6/2023 15:04:29
+
+Producto: ID: 1
+
+Nombre: Asado
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 2
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 800
+
+
+Historial:
+Fecha de Venta: 23/6/2023 15:16:35
+
+Producto: ID: 1
+
+Nombre: Asado
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 0
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 1000
+
+
+Historial:
+Fecha de Venta: 23/6/2023 15:18:03
+
+Producto: ID: 3
+
+Nombre: Entraña
+
+Precio por Kilo: 600
+
+Cantidad en Kilos: 0
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 1800
+
+
+Historial:
+Fecha de Venta: 23/6/2023 15:19:13
+
+Producto: ID: 2
+
+Nombre: Bife de Chorizo
+
+Precio por Kilo: 550
+
+Cantidad en Kilos: 0
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 550
+
+
+Historial:
+Fecha de Venta: 23/6/2023 15:20:24
+
+Producto: ID: 4
+
+Nombre: Matambre
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 3
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 2100
+
+
+Historial:
+Fecha de Venta: 23/6/2023 15:21:34
+
+Producto: ID: 7
+
+Nombre: Pechito de Cerdo
+
+Precio por Kilo: 400
+
+Cantidad en Kilos: 9
+
+Tipo de Corte: Cerdo
+
+
+
+Precio Total: 800
+
+
+Historial:
+Fecha de Venta: 23/6/2023 17:30:36
+
+Producto: ID: 0
+
+Nombre: 
+
+Precio por Kilo: 0
+
+Cantidad en Kilos: 0
+
+Tipo de Corte: 
+
+
+
+Precio Total: 100
+
+
+Historial:
+Fecha de Venta: 23/6/2023 17:32:15
+
+Producto: ID: 0
+
+Nombre: 
+
+Precio por Kilo: 0
+
+Cantidad en Kilos: 0
+
+Tipo de Corte: 
+
+
+
+Precio Total: 100
+
+
+Historial:
+Fecha de Venta: 23/6/2023 17:34:01
+
+Producto: ID: 0
+
+Nombre: 
+
+Precio por Kilo: 0
+
+Cantidad en Kilos: 0
+
+Tipo de Corte: 
+
+
+
+Precio Total: 100
+
+
+Historial:
+Fecha de Venta: 23/6/2023 17:35:14
+
+Producto: ID: 0
+
+Nombre: 
+
+Precio por Kilo: 0
+
+Cantidad en Kilos: 0
+
+Tipo de Corte: 
+
+
+
+Precio Total: 100
+
+

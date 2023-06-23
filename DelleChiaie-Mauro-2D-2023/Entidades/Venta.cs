@@ -13,7 +13,6 @@ namespace Entidades
         private Producto producto;
         private double cantidad;
         private double precioTotal;
-        //private List<Producto> productosVendidos;
         //#endregion
 
         //#region CONSTRUCTORES

@@ -14,12 +14,14 @@ namespace Formularios
     public partial class frmHistorialVenta : Form
     {
         List<Venta> historialVentas;
-
         #region CONSTRUCTOR
-        public frmHistorialVenta(List<Venta> historialVentas)
+        public frmHistorialVenta(List<Venta> _historialVentas)
         {
             InitializeComponent();
-            this.historialVentas = historialVentas;
+            this.historialVentas = _historialVentas;
+            textBoxHistorial.Multiline = true;
+            textBoxHistorial.ScrollBars = ScrollBars.Vertical;
+            textBoxHistorial.ReadOnly = true;
         }
 
         #endregion
@@ -40,17 +42,52 @@ namespace Formularios
 
         private void btnSerializarJson_Click(object sender, EventArgs e)
         {
-            //string nombreArchivo = "historial_ventas.json";
-            //string rutaArchivoJson = Path.Combine(@"C:\Users\delle\OneDrive\Escritorio\PP_2D_LABOII_2023\DelleChiaie-Mauro-2D-2023\Carniceria\bin\Archivos", nombreArchivo);
+            Serializador.SerializarEnJson(this.historialVentas);
 
-            //Serializador.SerializarEnJson(this.historialVentas, rutaArchivoJson);
-
-            //MessageBox.Show("Serialización en JSON realizada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Serialización en JSON realizada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            historialVentas.Clear();
         }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            textBoxHistorial.Clear();
+            string rutaArchivoXml = @"C:\Users\delle\OneDrive\Escritorio\PP_2D_LABOII_2023\DelleChiaie-Mauro-2D-2023\Carniceria\bin\Archivos\ventas.xml";
+
+            try
+            {
+                // Leer el contenido del archivo XML
+                string contenidoXml = File.ReadAllText(rutaArchivoXml);
+
+                // Mostrar el contenido en el TextBox
+                textBoxHistorial.Text = contenidoXml;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al deserializar el archivo XML: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string rutaArchivoJson = @"C:\Users\delle\OneDrive\Escritorio\PP_2D_LABOII_2023\DelleChiaie-Mauro-2D-2023\Carniceria\bin\Archivos\ventas.json";
+            textBoxHistorial.Clear();
+            try
+            {
+                // Leer el contenido del archivo JSON
+                string contenidoJson = File.ReadAllText(rutaArchivoJson);
+
+                // Mostrar el contenido en el TextBox
+                textBoxHistorial.Text = contenidoJson;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al deserializar el archivo JSON: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
