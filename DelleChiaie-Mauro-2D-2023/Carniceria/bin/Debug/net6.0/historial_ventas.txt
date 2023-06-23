@@ -1,2 +1,56 @@
 
 
+Historial:
+Fecha de Venta: 22/6/2023 21:52:21
+
+Producto: ID: 1
+
+Nombre: Asado
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 2
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 1000
+
+
+Historial:
+Fecha de Venta: 22/6/2023 21:52:24
+
+Producto: ID: 5
+
+Nombre: Tira de Asado
+
+Precio por Kilo: 400
+
+Cantidad en Kilos: 8
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 800
+
+
+Historial:
+Fecha de Venta: 22/6/2023 21:52:29
+
+Producto: ID: 7
+
+Nombre: Pechito de Cerdo
+
+Precio por Kilo: 400
+
+Cantidad en Kilos: 13
+
+Tipo de Corte: Cerdo
+
+
+
+Precio Total: 640
+
+
