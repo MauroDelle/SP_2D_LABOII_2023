@@ -123,7 +123,7 @@ namespace Formularios
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            if (double.TryParse(textBox1.Text, out double montoMaximo) && montoMaximo > 900)
+            if (double.TryParse(textBox1.Text, out double montoMaximo) && montoMaximo > 0)
             {
                 cliente.Saldo = montoMaximo;
                 textBox1.Text = cliente.Saldo.ToString("C2");
@@ -138,10 +138,10 @@ namespace Formularios
         {
             string textoBusqueda = txtBusqueda.Text.Trim();
 
-            // Validar que el texto contenga solo letras y la primera letra sea mayúscula
-            if (!Regex.IsMatch(textoBusqueda, "^[A-Za-zÁÉÍÓÚÑáéíóúñ]+$"))
+            // Validar que el texto contenga solo letras, espacios y la primera letra sea mayúscula
+            if (!Regex.IsMatch(textoBusqueda, "^[A-Za-zÁÉÍÓÚÑáéíóúñ ]+$"))
             {
-                MessageBox.Show("El texto ingresado no es válido. Solo se permiten letras.");
+                MessageBox.Show("El texto ingresado no es válido. Solo se permiten letras y espacios.");
                 return;
             }
 
@@ -177,6 +177,7 @@ namespace Formularios
                     try
                     {
                         QuitarDelCarrito(e.RowIndex);
+                        nombresProductosEnCarrito.Clear();
                         dgvCarrito.Rows.Clear();
                         dataGridView1.DataSource = Producto.CargarProductos();
                     }
@@ -190,27 +191,30 @@ namespace Formularios
                     MessageBox.Show("El carrito está vacío.", "Carrito Vacío", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-
-
         }
 
         private void btnComprar_Click(object sender, EventArgs e)
         {
-
-            if (cliente.CarritoDeProductos.Count == 0 || cliente.Saldo < 900)
+            if (!radioButtonCredito.Checked && !radioButtonEfectivo.Checked)
             {
-                
-                MessageBox.Show("No hay productos en el carrito o el saldo no fue ingresado","Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Por favor, seleccione un método de pago.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            else
+            if (cliente.CarritoDeProductos.Count == 0)
             {
-
+                MessageBox.Show("No hay productos en el carrito!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (cliente.Saldo < 0)
+            {
+                MessageBox.Show("No ingreso el saldo!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
                 try
                 {
                     bool esPagoConCredito = radioButtonCredito.Checked;
 
                     cliente.RealizarCompra(esPagoConCredito, cliente.CarritoDeProductos);
                     dgvCarrito.Rows.Clear();
+                    nombresProductosEnCarrito.Clear();
                     MessageBox.Show("Compra realizada con éxito.");
                     // Actualizar el valor del TextBox con el nuevo saldo del cliente
                     textBox1.Text = cliente.Saldo.ToString("C2");
@@ -221,10 +225,6 @@ namespace Formularios
                 {
                     MessageBox.Show(ex.Message, "Error al realizar la compra", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
-
-
-
         }
 
         private void CargarProductos()

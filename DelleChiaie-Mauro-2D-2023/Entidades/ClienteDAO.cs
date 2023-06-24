@@ -17,7 +17,14 @@ namespace Entidades
         #region CONSTRUCTOR
         public ClienteDAO()
         {
-            this.connectionString = new SqlConnection(IBaseDeDatos<Cliente>.ConexionBase());
+            try
+            {
+                this.connectionString = new SqlConnection(IBaseDeDatos<Cliente>.ConexionBase());
+            }
+            catch (Exception ex)
+            {
+                throw new SqlExceptions("Error al conectar a la base de datos", ex);
+            }
         }
         #endregion
 
@@ -31,9 +38,16 @@ namespace Entidades
         /// </remarks>
         public void Conectar()
         {
-            if (connectionString.State != ConnectionState.Open)
+            try
             {
-                connectionString.Open();
+                if (connectionString.State != ConnectionState.Open)
+                {
+                    connectionString.Open();
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw new SqlExceptions("Error al conectar a la base de datos", ex);
             }
         }
 

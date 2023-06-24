@@ -74,3 +74,183 @@ Tipo de Corte: Cerdo
 Cantidad: 2
 Precio Total: 400
 ---------------
+Fecha de Venta: 24/6/2023 17:05:35
+Producto: ID: 2
+
+Nombre: Bife de Chorizo
+
+Precio por Kilo: 550
+
+Cantidad en Kilos: 2
+
+Tipo de Corte: Vacuno
+
+
+Cantidad: 2
+Precio Total: 1100
+---------------
+Fecha de Venta: 24/6/2023 17:05:35
+Producto: ID: 2
+
+Nombre: Bife de Chorizo
+
+Precio por Kilo: 550
+
+Cantidad en Kilos: 2
+
+Tipo de Corte: Vacuno
+
+
+Cantidad: 2
+Precio Total: 1100
+---------------
+Fecha de Venta: 24/6/2023 17:05:35
+Producto: ID: 4
+
+Nombre: Matambre
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 2
+
+Tipo de Corte: Vacuno
+
+
+Cantidad: 2
+Precio Total: 1000
+---------------
+Fecha de Venta: 24/6/2023 17:06:47
+Producto: ID: 3
+
+Nombre: Entraña
+
+Precio por Kilo: 600
+
+Cantidad en Kilos: 2
+
+Tipo de Corte: Vacuno
+
+
+Cantidad: 2
+Precio Total: 1200
+---------------
+Fecha de Venta: 24/6/2023 17:06:47
+Producto: ID: 3
+
+Nombre: Entraña
+
+Precio por Kilo: 600
+
+Cantidad en Kilos: 2
+
+Tipo de Corte: Vacuno
+
+
+Cantidad: 2
+Precio Total: 1200
+---------------
+Fecha de Venta: 24/6/2023 17:06:47
+Producto: ID: 5
+
+Nombre: Tira de Asado
+
+Precio por Kilo: 400
+
+Cantidad en Kilos: 2
+
+Tipo de Corte: Vacuno
+
+
+Cantidad: 2
+Precio Total: 800
+---------------
+Fecha de Venta: 24/6/2023 17:35:56
+Producto: ID: 2
+
+Nombre: Bife de Chorizo
+
+Precio por Kilo: 550
+
+Cantidad en Kilos: 1
+
+Tipo de Corte: Vacuno
+
+
+Cantidad: 1
+Precio Total: 550
+---------------
+Fecha de Venta: 24/6/2023 17:39:04
+Producto: ID: 1
+
+Nombre: Asado
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 1
+
+Tipo de Corte: Vacuno
+
+
+Cantidad: 1
+Precio Total: 500
+---------------
+Fecha de Venta: 24/6/2023 17:42:31
+Producto: ID: 1
+
+Nombre: Asado
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 1
+
+Tipo de Corte: Vacuno
+
+
+Cantidad: 1
+Precio Total: 500
+---------------
+Fecha de Venta: 24/6/2023 17:46:02
+Producto: ID: 1
+
+Nombre: Asado
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 1
+
+Tipo de Corte: Vacuno
+
+
+Cantidad: 1
+Precio Total: 500
+---------------
+Fecha de Venta: 24/6/2023 17:48:57
+Producto: ID: 1
+
+Nombre: Asado
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 1
+
+Tipo de Corte: Vacuno
+
+
+Cantidad: 1
+Precio Total: 500
+---------------
+Fecha de Venta: 24/6/2023 17:54:29
+Producto: ID: 1
+
+Nombre: Asado
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 2
+
+Tipo de Corte: Vacuno
+
+
+Cantidad: 2
+Precio Total: 1000
+---------------

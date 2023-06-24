@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfVenta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Venta>
-    <FechaVenta>2023-06-24T14:22:56.4250742-03:00</FechaVenta>
+    <FechaVenta>2023-06-24T17:54:29.9092938-03:00</FechaVenta>
     <Cantidad>2</Cantidad>
-    <PrecioTotal>400</PrecioTotal>
+    <PrecioTotal>1000</PrecioTotal>
     <Producto>
-      <Nombre>Pechito de Nuevo</Nombre>
-      <PrecioPorKilo>200</PrecioPorKilo>
+      <Nombre>Asado</Nombre>
+      <PrecioPorKilo>500</PrecioPorKilo>
       <CantidadEnKilos>2</CantidadEnKilos>
-      <TipoCorte>Cerdo</TipoCorte>
-      <Id>25</Id>
+      <TipoCorte>Vacuno</TipoCorte>
+      <Id>1</Id>
     </Producto>
   </Venta>
 </ArrayOfVenta>

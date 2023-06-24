@@ -86,7 +86,7 @@ namespace Entidades
             }
             if (esPagoConCredito)
             {
-                montoTotal += 1.05;
+                montoTotal += montoTotal * 0.05;
             }
             return montoTotal;
         }
