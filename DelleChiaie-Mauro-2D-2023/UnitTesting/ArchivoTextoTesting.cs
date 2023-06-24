@@ -26,7 +26,6 @@ namespace UnitTesting
             Assert.IsTrue(contenidoArchivo.Contains(venta.ToString()));
         }
 
-
         public void ObtenerContenido_DeberiaDevolverContenidoArchivo()
         {
             // Arrange

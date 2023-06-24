@@ -321,6 +321,7 @@
             Controls.Add(dataGridView1);
             Controls.Add(pictureBox1);
             Controls.Add(pictureBox3);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmHeladera";
             Text = "Heladera";

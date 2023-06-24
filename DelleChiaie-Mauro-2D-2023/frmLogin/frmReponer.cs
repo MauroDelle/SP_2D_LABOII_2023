@@ -13,16 +13,15 @@ namespace Formularios
 {
     public partial class frmReponer : Form
     {
+        #region FORMULARIO SIN USAR
         #region ATRIBUTO
 
-        private Vendedor vendedor;
         #endregion
 
         #region CONSTRUCTOR
-        public frmReponer(Vendedor vendedorPrincipal)
+        public frmReponer()
         {
             InitializeComponent();
-            vendedor = vendedorPrincipal;
         }
         #endregion
 
@@ -30,42 +29,16 @@ namespace Formularios
 
         private void frmReponer_Load(object sender, EventArgs e)
         {
-            //dataGridView1.DataSource = null;
 
-            //if (vendedor.ListaProductos != null)
-            //{
-            //    dataGridView1.DataSource = vendedor.ListaProductos;
-            //}
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            //// Obtener el producto seleccionado en el DataGridView
-            //Producto productoSeleccionado = (Producto)dataGridView1.CurrentRow.DataBoundItem;
-            //// Obtener la cantidad de kilos ingresada
-            //if (!double.TryParse(textBox1.Text, out double cantidad) || cantidad <= 0 || cantidad >= 15)
-            //{
-            //    MessageBox.Show("Debe ingresar una cantidad válida. 1-15");
-            //    return;
-            //}
 
-            //// Reponer el producto
-            //if (vendedor.ReponerProducto(productoSeleccionado, cantidad))
-            //{
-            //    MessageBox.Show("Reposición realizada con éxito.");
-            //}
-            //else
-            //{
-            //    MessageBox.Show("No se pudo realizar la reposición.");
-            //}
         }
 
         private void frmReponer_Activated(object sender, EventArgs e)
         {
-            //dataGridView1.DataSource = null;
-            //if (vendedor.ListaProductos != null)
-            //{
-            //    dataGridView1.DataSource = vendedor.ListaProductos;
-            //}
+
         }
         #endregion
 
@@ -75,6 +48,7 @@ namespace Formularios
         {
 
         }
+        #endregion
         #endregion
     }
 }

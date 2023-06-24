@@ -39,6 +39,10 @@
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             dgvCarrito = new DataGridView();
+            Nombre = new DataGridViewTextBoxColumn();
+            Precio = new DataGridViewTextBoxColumn();
+            Cantidad = new DataGridViewTextBoxColumn();
+            Quitar = new DataGridViewButtonColumn();
             pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
             groupBox1 = new GroupBox();
@@ -51,10 +55,6 @@
             btnComprar = new Button();
             Agregar = new DataGridViewButtonColumn();
             dataGridView1 = new DataGridView();
-            Nombre = new DataGridViewTextBoxColumn();
-            Precio = new DataGridViewTextBoxColumn();
-            Cantidad = new DataGridViewTextBoxColumn();
-            Quitar = new DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -159,6 +159,36 @@
             dgvCarrito.TabIndex = 19;
             dgvCarrito.CellContentClick += dgvCarrito_CellContentClick;
             // 
+            // Nombre
+            // 
+            Nombre.HeaderText = "Nombre";
+            Nombre.Name = "Nombre";
+            Nombre.ReadOnly = true;
+            // 
+            // Precio
+            // 
+            Precio.HeaderText = "Precio";
+            Precio.Name = "Precio";
+            Precio.ReadOnly = true;
+            // 
+            // Cantidad
+            // 
+            Cantidad.HeaderText = "Cantidad";
+            Cantidad.Name = "Cantidad";
+            Cantidad.ReadOnly = true;
+            // 
+            // Quitar
+            // 
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle1.BackColor = Color.Red;
+            dataGridViewCellStyle1.ForeColor = Color.Red;
+            dataGridViewCellStyle1.SelectionBackColor = Color.Red;
+            dataGridViewCellStyle1.SelectionForeColor = Color.Red;
+            Quitar.DefaultCellStyle = dataGridViewCellStyle1;
+            Quitar.HeaderText = "Borrar Carro";
+            Quitar.Name = "Quitar";
+            Quitar.ReadOnly = true;
+            // 
             // pictureBox4
             // 
             pictureBox4.Image = Properties.Resources.download1;
@@ -188,6 +218,7 @@
             groupBox1.TabIndex = 24;
             groupBox1.TabStop = false;
             groupBox1.Text = "Productos Disponibles";
+            groupBox1.Enter += groupBox1_Enter;
             // 
             // groupBox2
             // 
@@ -292,36 +323,6 @@
             dataGridView1.CellClick += dataGridView1_CellClick;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // Nombre
-            // 
-            Nombre.HeaderText = "Nombre";
-            Nombre.Name = "Nombre";
-            Nombre.ReadOnly = true;
-            // 
-            // Precio
-            // 
-            Precio.HeaderText = "Precio";
-            Precio.Name = "Precio";
-            Precio.ReadOnly = true;
-            // 
-            // Cantidad
-            // 
-            Cantidad.HeaderText = "Cantidad";
-            Cantidad.Name = "Cantidad";
-            Cantidad.ReadOnly = true;
-            // 
-            // Quitar
-            // 
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle1.BackColor = Color.Red;
-            dataGridViewCellStyle1.ForeColor = Color.Red;
-            dataGridViewCellStyle1.SelectionBackColor = Color.Red;
-            dataGridViewCellStyle1.SelectionForeColor = Color.Red;
-            Quitar.DefaultCellStyle = dataGridViewCellStyle1;
-            Quitar.HeaderText = "Borrar Carro";
-            Quitar.Name = "Quitar";
-            Quitar.ReadOnly = true;
-            // 
             // frmVenta
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -341,8 +342,10 @@
             Controls.Add(groupBox1);
             Controls.Add(groupBox2);
             Controls.Add(pictureBox3);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmVenta";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frmVenta";
             Load += frmVenta_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();

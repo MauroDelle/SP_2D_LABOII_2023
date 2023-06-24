@@ -16,6 +16,7 @@ namespace Entidades
         #endregion
 
         #region CONSTRUCTORES
+        public Venta() { }
         public Venta(Producto producto, double cantidad, double precioTotal, DateTime fechaVenta)
         {
             this.producto = producto;

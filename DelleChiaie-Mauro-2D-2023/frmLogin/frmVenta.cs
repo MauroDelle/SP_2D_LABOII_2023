@@ -19,6 +19,8 @@ namespace Formularios
         private Vendedor _vendedor;
         private Cliente cliente;
         private Producto producto;
+        private List<string> nombresProductosEnCarrito = new List<string>(); // Lista auxiliar para almacenar los nombres de los productos en el carrito
+
         #endregion
 
         #region CONSTRUCTOR
@@ -34,6 +36,10 @@ namespace Formularios
 
         #region SIN USAR
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }
@@ -67,14 +73,20 @@ namespace Formularios
 
             return cantidad;
         }
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
             if (e.RowIndex >= 0 && e.ColumnIndex == dataGridView1.Columns["Agregar"].Index)
             {
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
                 Producto producto = (Producto)dataGridView1.Rows[e.RowIndex].DataBoundItem;
 
+                // Validar si el producto ya está en el carrito
+                if (nombresProductosEnCarrito.Contains(producto.Nombre))
+                {
+                    MessageBox.Show("Ya has agregado este producto al carrito.");
+                    return;
+                }
 
                 int cantidad = ObtenerCantidad(); // Obtener la cantidad ingresada por el usuario
 
@@ -94,26 +106,15 @@ namespace Formularios
                 {
                     row.Visible = false; // Ocultar la fila cuando la cantidad llega a cero
                 }
+
+                // Agregar el nombre del producto a la lista auxiliar
+                nombresProductosEnCarrito.Add(producto.Nombre);
             }
         }
         private void btnAgregarAlCarro_Click(object sender, EventArgs e)
         {
         }
         #endregion
-
-        private void CargarProductos()
-        {
-            List<Producto> productos = Producto.CargarProductos();
-            dataGridView1.DataSource = productos;
-
-            // Configurar las columnas del DataGridView
-            dataGridView1.Columns["Id"].HeaderText = "ID";
-            dataGridView1.Columns["Nombre"].HeaderText = "Nombre";
-            dataGridView1.Columns["PrecioPorKilo"].HeaderText = "Precio por Kilo";
-            dataGridView1.Columns["CantidadEnKilos"].HeaderText = "Cantidad en Kilos";
-            dataGridView1.Columns["TipoCorte"].HeaderText = "Tipo de Corte";
-        }
-
 
         #region FUNCIONES
         private void frmVenta_Load(object sender, EventArgs e)
@@ -122,7 +123,7 @@ namespace Formularios
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            if (double.TryParse(textBox1.Text, out double montoMaximo) && montoMaximo > 0)
+            if (double.TryParse(textBox1.Text, out double montoMaximo) && montoMaximo > 900)
             {
                 cliente.Saldo = montoMaximo;
                 textBox1.Text = cliente.Saldo.ToString("C2");
@@ -140,15 +141,24 @@ namespace Formularios
             // Validar que el texto contenga solo letras y la primera letra sea mayúscula
             if (!Regex.IsMatch(textoBusqueda, "^[A-Za-zÁÉÍÓÚÑáéíóúñ]+$"))
             {
-                MessageBox.Show("El texto ingresado no es válido. Solo se permiten letras y la primera letra debe ser mayúscula.");
+                MessageBox.Show("El texto ingresado no es válido. Solo se permiten letras.");
                 return;
             }
+
             // Convertir la primera letra a mayúscula
             textoBusqueda = char.ToUpper(textoBusqueda[0]) + textoBusqueda.Substring(1);
 
             ProductoDAO productoDAO = new ProductoDAO();
             List<Producto> productosFiltrados = productoDAO.ObtenerProductosPorNombre(textoBusqueda);
-            dataGridView1.DataSource = productosFiltrados;
+
+            if (productosFiltrados.Count == 0)
+            {
+                MessageBox.Show("No se encontraron resultados para la búsqueda.");
+            }
+            else
+            {
+                dataGridView1.DataSource = productosFiltrados;
+            }
         }
         private void button3_Click(object sender, EventArgs e)
         {
@@ -189,7 +199,8 @@ namespace Formularios
 
             if (cliente.CarritoDeProductos.Count == 0 || cliente.Saldo < 900)
             {
-                MessageBox.Show("No hay productos en el carrito. y el monto debe ser mayor a $900 Por favor agregue productos antes de realizar la compra.", "Carrito vacío", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                
+                MessageBox.Show("No hay productos en el carrito o el saldo no fue ingresado","Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -215,7 +226,19 @@ namespace Formularios
 
 
         }
-        #endregion
+
+        private void CargarProductos()
+        {
+            List<Producto> productos = Producto.CargarProductos();
+            dataGridView1.DataSource = productos;
+
+            // Configurar las columnas del DataGridView
+            dataGridView1.Columns["Id"].HeaderText = "ID";
+            dataGridView1.Columns["Nombre"].HeaderText = "Nombre";
+            dataGridView1.Columns["PrecioPorKilo"].HeaderText = "Precio por Kilo";
+            dataGridView1.Columns["CantidadEnKilos"].HeaderText = "Cantidad en Kilos";
+            dataGridView1.Columns["TipoCorte"].HeaderText = "Tipo de Corte";
+        }
 
         private void QuitarDelCarrito(int rowIndex)
         {
@@ -283,7 +306,7 @@ namespace Formularios
             return false;
         }
 
-
+        #endregion
 
     }
 }

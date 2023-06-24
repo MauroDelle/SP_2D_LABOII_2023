@@ -13,7 +13,10 @@ namespace Formularios
 {
     public partial class frmHistorialVenta : Form
     {
+        #region ATRIBUTO
         List<Venta> historialVentas;
+        #endregion
+
         #region CONSTRUCTOR
         public frmHistorialVenta(List<Venta> _historialVentas)
         {
@@ -26,31 +29,13 @@ namespace Formularios
 
         #endregion
 
-        #region SIN USAR
-        private void frmHistorialVenta_Load(object sender, EventArgs e)
-        {
-        }
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
-        #endregion
-
-        private void textBoxHistorial_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        #region FUNCIONES
         private void btnSerializarJson_Click(object sender, EventArgs e)
         {
             Serializador.SerializarEnJson(this.historialVentas);
 
             MessageBox.Show("Serialización en JSON realizada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             historialVentas.Clear();
-        }
-
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -89,5 +74,27 @@ namespace Formularios
                 MessageBox.Show("Error al deserializar el archivo JSON: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
+
+        #region SIN USAR
+        private void frmHistorialVenta_Load(object sender, EventArgs e)
+        {
+        }
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+        private void textBoxHistorial_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+
+        #endregion
+
     }
 }

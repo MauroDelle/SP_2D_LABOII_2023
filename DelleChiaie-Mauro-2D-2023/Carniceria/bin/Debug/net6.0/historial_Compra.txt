@@ -59,3 +59,18 @@ Tipo de Corte: Ave
 Cantidad: 4
 Precio Total: 1200
 ---------------
+Fecha de Venta: 24/6/2023 14:22:56
+Producto: ID: 25
+
+Nombre: Pechito de Nuevo
+
+Precio por Kilo: 200
+
+Cantidad en Kilos: 2
+
+Tipo de Corte: Cerdo
+
+
+Cantidad: 2
+Precio Total: 400
+---------------
