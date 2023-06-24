@@ -13,12 +13,20 @@ namespace Formularios
 {
     public partial class frmAgregarCorte : Form
     {
+        #region PROPIEDADES
+
         Producto producto = new Producto();
+        #endregion
+
+        #region CONSTRUCTOR
         public frmAgregarCorte()
         {
             InitializeComponent();
             CargarProductos();
         }
+        #endregion
+
+        #region FUNCIONES
 
         private void CargarProductos()
         {
@@ -78,54 +86,6 @@ namespace Formularios
             txtPrecio.Clear();
             numericUpDownCantidad.Value = 0;
         }
-
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonEliminar_Click(object sender, EventArgs e)
-        {
-            if (dataGridView1.SelectedRows.Count > 0)
-            {
-                int idProducto = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["ID"].Value);
-
-                try
-                {
-                    Producto producto = new Producto();
-
-                    producto.EliminarProducto(idProducto);
-
-                    CargarProductos();
-                }
-                catch (ArgumentException ex)
-                {
-                    MessageBox.Show(ex.Message, "Error al eliminar producto", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al eliminar el producto: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Debe seleccionar un producto para eliminar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-        }
-
-        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void buttonModificar_Click(object sender, EventArgs e)
         {
             try
@@ -178,5 +138,57 @@ namespace Formularios
         {
             dataGridView1.DataSource = Producto.CargarProductos();
         }
+
+
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                int idProducto = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["ID"].Value);
+
+                try
+                {
+                    Producto producto = new Producto();
+
+                    producto.EliminarProducto(idProducto);
+
+                    CargarProductos();
+                }
+                catch (ArgumentException ex)
+                {
+                    MessageBox.Show(ex.Message, "Error al eliminar producto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al eliminar el producto: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un producto para eliminar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+        }
+        #endregion
+
+        #region SIN USAR
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        #endregion
+
+
     }
 }

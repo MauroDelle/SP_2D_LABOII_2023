@@ -11,32 +11,16 @@ namespace Entidades
     public class Vendedor : Usuario
     {
         #region ATRIBUTOS
-
         private List<Venta> historialVentas;
         private DescuentoRecargoDelegate descuentoRecargoDelegate;
         public event Action<Producto> ActualizarCantidadProductoEvent;
         #endregion
 
         #region CONSTRUCTORES
-
         public Vendedor() : base(0, "", "", "", 0, 0)
         {
-            // Constructor vacío
             this.historialVentas = new List<Venta>();
         }
-
-        //public Vendedor(int id,string nombre,string correo,string constrasenia,int idPersona,int idCliente,DescuentoRecargoDelegate descuentoRecargoDelegate):base(id,nombre,correo,constrasenia,idPersona,idCliente)
-        //{
-        //    this.descuentoRecargoDelegate = descuentoRecargoDelegate;    
-        //    this.historialVentas= new List<Venta>();
-        //}
-
-        //public Vendedor():this("Sin nombre", "Sin correo", "Sin contraseña",true)
-        //{ 
-        //    listaClientes = new List<Cliente>();
-        //    ListaProductos = new List<Producto>();
-        //    historialVentas = new List<Venta>();
-        //}
         #endregion
 
         #region PROPIEDADES
@@ -45,6 +29,10 @@ namespace Entidades
 
         #region MÉTODOS
 
+        /// <summary>
+        /// Actualiza el saldo del cliente proporcionado.
+        /// </summary>
+        /// <param name="cliente">El objeto Cliente que contiene la información del cliente.</param>
         public void ActualizarSaldoCliente(Cliente cliente)
         {
             ClienteDAO clienteDAO = new ClienteDAO();
@@ -53,6 +41,18 @@ namespace Entidades
 
             cliente.Saldo = saldoCliente;
         }
+
+        /// <summary>
+        /// Realiza una venta de un producto a un cliente.
+        /// </summary>
+        /// <param name="producto">El producto que se va a vender.</param>
+        /// <param name="cliente">El cliente al que se le realiza la venta.</param>
+        /// <param name="cantidad">La cantidad del producto que se va a vender.</param>
+        /// <param name="esEfectivo">Indica si el pago se realiza en efectivo.</param>
+        /// <returns>
+        /// true si la venta se realizó correctamente, false si la venta no se pudo realizar.
+        /// </returns>
+        /// <exception cref="Exception">Se lanza una excepción en caso de que ocurra un error durante la venta.</exception>
         public bool Vender(Producto producto, Cliente cliente, int cantidad, bool esEfectivo)
         {
             try
@@ -101,20 +101,24 @@ namespace Entidades
             }
         }
 
-
+        /// <summary>
+        /// Agrega una venta al historial de ventas.
+        /// </summary>
+        /// <param name="venta">La venta que se va a agregar.</param>
         public void AgregarVenta(Venta venta)
         {
             HistorialVentas.Add(venta);
         }
 
         /// <summary>
-        /// Retorna el historial completo de ventas realizadas por el vendedor.
+        /// Obtiene el historial de ventas.
         /// </summary>
-        /// <returns>Una lista de objetos de tipo Venta que representan el historial de ventas realizadas por el vendedor.</returns>
+        /// <returns>Una lista de objetos Venta que representa el historial de ventas.</returns>
         public List<Venta> ObtenerHistorialVenta()
         {
             return this.HistorialVentas;
         }
+
         #endregion
     }
 }

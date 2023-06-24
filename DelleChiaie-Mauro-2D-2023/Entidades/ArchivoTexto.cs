@@ -8,6 +8,14 @@ namespace Entidades
 {
     public class ArchivoTexto
     {
+        #region MÉTODOS
+
+        /// <summary>
+        /// Guarda el historial de una venta en un archivo de texto.
+        /// </summary>
+        /// <param name="venta">La venta que se desea guardar en el historial.</param>
+        /// <param name="rutaArchivo">La ruta completa del archivo de texto donde se guardará el historial.</param>
+        /// <exception cref="Exception">Se lanza una excepción si ocurre un error al guardar el historial de ventas.</exception>
         public static void GuardarHistorialVentaEnTxt(Venta venta, string rutaArchivo)
         {
 			try
@@ -25,6 +33,16 @@ namespace Entidades
                 throw new Exception($"Error al guardar el historial de ventas en el archivo: {ex.Message}", ex);
 			}
         }
+
+        /// <summary>
+        /// Obtiene el contenido de un archivo como una cadena de texto.
+        /// </summary>
+        /// <param name="rutaArchivo">La ruta completa del archivo.</param>
+        /// <returns>El contenido del archivo como una cadena de texto.</returns>
+        /// <remarks>
+        /// Si ocurre un error al obtener el contenido del archivo, se muestra un mensaje de error en la consola
+        /// y se devuelve una cadena vacía.
+        /// </remarks>
         public static string ObtenerContenido(string rutaArchivo)
         {
             try
@@ -39,7 +57,17 @@ namespace Entidades
             }
         }
 
-
+        /// <summary>
+        /// Guarda el historial de compras en un archivo de texto.
+        /// </summary>
+        /// <param name="ventas">La lista de ventas que se desea guardar en el historial.</param>
+        /// <remarks>
+        /// El archivo de texto donde se guarda el historial se encuentra en la siguiente ruta:
+        /// C:\Users\delle\OneDrive\Escritorio\PP_2D_LABOII_2023\DelleChiaie-Mauro-2D-2023\Carniceria\bin\Debug\net6.0\historial_Compra.txt
+        /// Cada venta en la lista se escribe en el archivo de texto con su respectiva información, incluyendo la fecha de venta,
+        /// el producto, la cantidad y el precio total. Se separan las ventas con líneas divisorias.
+        /// Si ocurre un error al guardar las ventas en el archivo de texto, se muestra un mensaje de error en la consola.
+        /// </remarks>
         public static void GuardarHistorialCompraTxt(List<Venta> ventas)
         {
             string filePath = @"C:\Users\delle\OneDrive\Escritorio\PP_2D_LABOII_2023\DelleChiaie-Mauro-2D-2023\Carniceria\bin\Debug\net6.0\historial_Compra.txt";
@@ -65,6 +93,6 @@ namespace Entidades
             }
         }
 
-
+        #endregion
     }
 }

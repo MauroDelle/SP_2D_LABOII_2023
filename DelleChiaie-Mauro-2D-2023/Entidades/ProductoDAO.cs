@@ -11,15 +11,24 @@ namespace Entidades
 {
     public class ProductoDAO : IBaseDeDatos<Producto>
     {
+        #region ATRIBUTOS
         private IBaseDeDatos<Producto> baseDeDatos;
         private SqlConnection connectionString;
+        #endregion
 
+        #region CONSTRUCTOR
         public ProductoDAO()
         {
             this.connectionString = new SqlConnection(IBaseDeDatos<Producto>.ConexionBase());
         }
+        #endregion
 
-        #region MétodosInterfaz
+        #region GENERICS
+
+
+        /// <summary>
+        /// Establece la conexión con la base de datos si no está abierta.
+        /// </summary>
         public void Conectar()
         {
             if (connectionString.State != ConnectionState.Open)
@@ -27,6 +36,10 @@ namespace Entidades
                 connectionString.Open();
             }
         }
+
+        /// <summary>
+        /// Cierra la conexión con la base de datos si no está cerrada.
+        /// </summary>
         public void Desconectar()
         {
             if(connectionString.State != ConnectionState.Closed)
@@ -34,6 +47,12 @@ namespace Entidades
                 connectionString.Close();
             }
         }
+
+        /// <summary>
+        /// Obtiene un producto de la base de datos por su ID.
+        /// </summary>
+        /// <param name="id">ID del producto a obtener.</param>
+        /// <returns>El producto encontrado, o el valor predeterminado si no se encuentra ningún producto con el ID especificado.</returns>
         public Producto ObtenerPorId(int id)
         {
             Producto producto = default(Producto);
@@ -65,6 +84,11 @@ namespace Entidades
 
             return producto;
         }
+
+        /// <summary>
+        /// Obtiene todos los productos de la base de datos.
+        /// </summary>
+        /// <returns>Una lista de productos.</returns>
         public List<Producto> ObtenerTodos()
         {
             List<Producto> productos = new List<Producto>();
@@ -103,7 +127,17 @@ namespace Entidades
 
             return productos;
         }
+
+
         #endregion
+
+        #region MÉTODOS
+
+
+        /// <summary>
+        /// Agrega un nuevo producto a la base de datos.
+        /// </summary>
+        /// <param name="producto">El producto a agregar.</param>
         public void AgregarProducto(Producto producto)
         {
             try
@@ -131,6 +165,11 @@ namespace Entidades
                 Desconectar();
             }
         }
+
+        /// <summary>
+        /// Elimina un producto de la base de datos por su ID.
+        /// </summary>
+        /// <param name="id">El ID del producto a eliminar.</param>
         public void EliminarProducto(int id)
         {
             try
@@ -153,6 +192,11 @@ namespace Entidades
                 Desconectar();
             }
         }
+
+        /// <summary>
+        /// Modifica un producto existente en la base de datos.
+        /// </summary>
+        /// <param name="producto">El producto con los nuevos valores a modificar.</param>
         public void ModificarProducto(Producto producto)
         {
             try
@@ -180,6 +224,11 @@ namespace Entidades
                 Desconectar();
             }
         }
+
+        /// <summary>
+        /// Actualiza la cantidad de un producto en la base de datos.
+        /// </summary>
+        /// <param name="producto">El producto con la nueva cantidad a actualizar.</param>
         public void ActualizarCantidadProducto(Producto producto)
         {
             try
@@ -202,6 +251,11 @@ namespace Entidades
                 Desconectar();
             }
         }
+
+        /// <summary>
+        /// Actualiza la cantidad de un producto en la base de datos.
+        /// </summary>
+        /// <param name="producto">El producto con la nueva cantidad a actualizar.</param>
         public void ActualizarEnBaseDeDatos(Producto producto)
         {
             try
@@ -227,6 +281,11 @@ namespace Entidades
             }
         }
 
+        /// <summary>
+        /// Obtiene una lista de productos que coinciden con el nombre o tipo de corte especificado.
+        /// </summary>
+        /// <param name="nombre">El nombre o tipo de corte a buscar.</param>
+        /// <returns>Una lista de productos que coinciden con el nombre o tipo de corte especificado.</returns>
         public List<Producto> ObtenerProductosPorNombre(string nombre)
         {
             List<Producto> productos = new List<Producto>();
@@ -254,6 +313,8 @@ namespace Entidades
             Desconectar();
             return productos;
         }
+
+        #endregion
 
     }
 }

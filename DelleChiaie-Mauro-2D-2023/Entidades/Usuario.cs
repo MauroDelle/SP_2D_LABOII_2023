@@ -12,11 +12,6 @@
         #endregion
 
         #region CONSTRUCTOR
-
-        protected Usuario()
-        {
-        }
-
         protected Usuario(string nombre, string correo, string contrasenia)
         {
             this.nombre = nombre;
@@ -40,20 +35,17 @@
         public int Id { get { return this.id; } set { this.id = value; } }
         #endregion
 
+        #region METODOS
 
+        /// <summary>
+        /// Devuelve una representación en formato de cadena del objeto.
+        /// </summary>
+        /// <returns>Una cadena que representa el objeto actual.</returns>
         public override string ToString()
         {
             return $"{Nombre}";
         }
 
-
-        #region METODOS
-
-        /// <summary>
-        /// Determina si el objeto actual es una instancia de la clase Vendedor.
-        /// </summary>
-        /// <returns>Devuelve verdadero si el objeto es una instancia de Vendedor, falso en caso contrario.</returns>
-        //public abstract bool ClienteOVendedor();
         #endregion
     }
 }

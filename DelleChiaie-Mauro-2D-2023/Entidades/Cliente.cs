@@ -12,9 +12,9 @@ namespace Entidades
         private int edad;
         private double saldo;
         private List<Producto> carritoDeProductos;
-        //private List<Venta> ventasRealizadas;
         #endregion
 
+        #region CONSTRUCTORES
         public Cliente():base(0, "", "", "", 0, 0)
         {
             carritoDeProductos = new List<Producto>();
@@ -25,13 +25,23 @@ namespace Entidades
             this.Saldo = 0;
             //ventasRealizadas = new List<Venta>();   
         }
+        #endregion
 
-
-
+        #region PROPIEDADES
         public double Saldo { get => saldo; set => saldo = value; }
         public int Edad { get => edad; set => edad = value; }
         public List<Producto> CarritoDeProductos { get => carritoDeProductos; set => carritoDeProductos = value; }
+        #endregion
 
+        #region MÉTODOS
+        /// <summary>
+        /// Carga la lista de clientes desde el origen de datos.
+        /// </summary>
+        /// <returns>La lista de clientes cargada.</returns>
+        /// <remarks>
+        /// Se utiliza un objeto de la clase ClienteDAO para obtener todos los clientes desde el origen de datos.
+        /// El método devuelve la lista de clientes obtenida.
+        /// </remarks>
         public List<Cliente> CargarClientes()
         {
             ClienteDAO clienteDAO = new ClienteDAO();
@@ -39,63 +49,33 @@ namespace Entidades
             return clientes;
         }
 
-        //#region PROPIEDADES 
-        //public List<Producto> CarritoDeProductos { get { return this.carritoDeProductos; } set { this.carritoDeProductos = value; } }
-        //public List<Venta> VentasRealizadas { get { return this.ventasRealizadas; } set { this.ventasRealizadas = value; } }
-        //public double Saldo{get { return this.saldo; }set { this.saldo = value; }}
-
-        //public int Id { get => id; set => id = value; }
-        //public string Apellido { get => apellido; set => apellido = value; }
-        //public string Nombre1 { get => nombre; set => nombre = value; }
-        //#endregion
-
-        //#region MÉTODOS
-
-        ///// <summary>
-        ///// Un override que devuelve un bool dependiendo que tipo de usuario es
-        ///// </summary>
-        ///// <returns></returns>
-        ////public override bool ClienteOVendedor()
-        ////{
-        ////    return false;
-        ////}
-
-        ///// <summary>|
-        ///// Un método que recibe un producto tipo Producto y una cantidad especifica, y agrega a la lista de-
-        ///// carritoDeProductos un nuevo elemento.
-        ///// </summary>
-        ///// <param name="producto"></param>
-        ///// <param name="cantidad"></param>
+        /// <summary>
+        /// Agrega un producto al carrito de compras.
+        /// </summary>
+        /// <param name="producto">El producto que se desea agregar al carrito.</param>
+        /// <param name="cantidad">La cantidad del producto que se desea agregar.</param>
+        /// <remarks>
+        /// Crea un nuevo objeto Producto con la información del producto proporcionado,
+        /// incluyendo el ID, nombre, precio por kilo, cantidad y tipo de corte.
+        /// A continuación, agrega el producto al carrito de productos.
+        /// </remarks>
         public void AgregarProductoAlCarrito(Producto producto, double cantidad)
         {
             carritoDeProductos.Add(new Producto(producto.Id,producto.Nombre,producto.PrecioPorKilo,cantidad,producto.TipoCorte));
         }
 
-        ///// <summary>
-        ///// Un metodo Mostrar que utiliza stringBuilder para mostrar los campos de la clase venta
-        ///// </summary>
-        ///// <returns></returns>
-        //public string Mostrar()
-        //{
-        //    StringBuilder sb = new StringBuilder();
-
-        //    foreach (Venta venta in ventasRealizadas)
-        //    {
-        //        sb.AppendLine($"Fecha: {venta.FechaVenta}, Monto: {venta.PrecioTotal:C}, Cantidad: {venta.Cantidad}," +
-        //            $" Saldo actual: ${this.saldo}C");
-        //    }
-
-        //    return sb.ToString();
-        //}
-
-        ///// <summary>
-        ///// Método utilizado en el metodo RealizarCompra, para calcular el monto total, recibe un bool y una lista
-        ///// de los productos en el carrito, acumula el precio total de los productos seleccionados y el bool dependiendo que
-        ///// retorne calcula el +5% de recargo o no
-        ///// </summary>
-        ///// <param name="esPagoConCredito"></param>
-        ///// <param name="carritoDeProductos"></param>
-        ///// <returns></returns>
+        /// <summary>
+        /// Calcula el monto total de la compra.
+        /// </summary>
+        /// <param name="esPagoConCredito">Indica si el pago se realizará con tarjeta de crédito.</param>
+        /// <param name="carritoDeProductos">La lista de productos en el carrito de compras.</param>
+        /// <returns>El monto total de la compra.</returns>
+        /// <remarks>
+        /// Calcula el monto total de la compra sumando el precio por kilo de cada producto en el carrito,
+        /// multiplicado por la cantidad en kilos de cada producto.
+        /// Si el pago se realiza con tarjeta de crédito, se agrega un recargo del 5% al monto total.
+        /// Devuelve el monto total de la compra.
+        /// </remarks>
         public double CalcularMontoTotal(bool esPagoConCredito, List<Producto> carritoDeProductos)
         {
             double montoTotal = 0;
@@ -111,13 +91,31 @@ namespace Entidades
             return montoTotal;
         }
 
-        ///// <summary>
-        ///// Realiza la compra de los productos seleccionados por el cliente y actualiza el saldo del vendedor.
-        ///// </summary>
-        ///// <param name="esPagoConCredito">Indica si el pago se realiza con tarjeta de crédito o no.</param>
-        ///// <param name="carritoDeProductos">Lista de productos seleccionados por el cliente para comprar.</param>
-        ///// <param name="ListaProductos">Lista de todos los productos disponibles para la venta.</param>
-        ///// <exception cref="Exception">Lanza una excepción si el cliente no tiene suficiente saldo para realizar la compra.</exception>
+        /// <summary>
+        /// Realiza una compra con los productos del carrito de compras.
+        /// </summary>
+        /// <param name="esPagoConCredito">Indica si el pago se realizará con tarjeta de crédito.</param>
+        /// <param name="carritoDeProductos">La lista de productos en el carrito de compras.</param>
+        /// <exception cref="Exception">Se lanza una excepción si ocurre algún error durante la compra.</exception>
+        /// <remarks>
+        /// Crea una lista de ventas realizadas para almacenar los detalles de cada venta.
+        /// Se utiliza un objeto de la clase ProductoDAO para obtener información adicional de los productos desde la base de datos.
+        /// Se obtiene la fecha actual como fecha de venta.
+        /// Se calcula el monto total de la compra utilizando el método CalcularMontoTotal.
+        /// Se verifica si el cliente tiene suficiente saldo para la compra y se lanza una excepción si no es así.
+        /// Para cada producto en el carrito de compras, se realiza lo siguiente:
+        ///     - Se obtiene el producto de la base de datos utilizando su ID.
+        ///     - Se verifica si el producto existe en la base de datos y se lanza una excepción si no es así.
+        ///     - Se verifica si hay suficiente stock disponible para la cantidad deseada del producto y se lanza una excepción si no es así.
+        ///     - Se actualiza la cantidad en kilos del producto en la base de datos restando la cantidad deseada.
+        ///     - Se calcula el precio total para el producto.
+        ///     - Se crea una instancia de Venta con los datos correspondientes.
+        ///     - Se agrega la venta a la lista de ventas realizadas.
+        /// Se actualiza el saldo del cliente según el método de pago (con o sin tarjeta de crédito).
+        /// Se guarda el historial de compras en formato XML utilizando el método Serializador.SerializarXml.
+        /// Se guarda el historial de compras en un archivo de texto utilizando el método ArchivoTexto.GuardarHistorialCompraTxt.
+        /// Se limpia el carrito de productos.
+        /// </remarks>
         public void RealizarCompra(bool esPagoConCredito, List<Producto> carritoDeProductos)
         {
             List<Venta> ventasRealizadas = new List<Venta>();
@@ -178,12 +176,7 @@ namespace Entidades
             ArchivoTexto.GuardarHistorialCompraTxt(ventasRealizadas);
             carritoDeProductos.Clear();
         }
-            //}
-            //#endregion
+        #endregion
 
-
-
-
-
-        }
+    }
 }

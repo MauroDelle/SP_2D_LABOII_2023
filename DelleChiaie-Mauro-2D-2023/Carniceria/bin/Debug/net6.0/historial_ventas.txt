@@ -972,3 +972,57 @@ Tipo de Corte:
 Precio Total: 100
 
 
+Historial:
+Fecha de Venta: 24/6/2023 11:33:30
+
+Producto: ID: 1
+
+Nombre: Asado
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 8
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 1000
+
+
+Historial:
+Fecha de Venta: 24/6/2023 12:56:54
+
+Producto: ID: 26
+
+Nombre: Pechito
+
+Precio por Kilo: 200
+
+Cantidad en Kilos: 1
+
+Tipo de Corte: Ave
+
+
+
+Precio Total: 200
+
+
+Historial:
+Fecha de Venta: 24/6/2023 13:20:04
+
+Producto: ID: 1
+
+Nombre: Asado
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 7
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 4200
+
+

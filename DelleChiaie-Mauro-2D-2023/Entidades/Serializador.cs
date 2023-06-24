@@ -7,6 +7,14 @@ namespace Entidades
 {
     public static class Serializador
     {
+        #region MÉTODOS
+
+        /// <summary>
+        /// Serializa una lista de ventas en formato JSON y las guarda en un archivo.
+        /// </summary>
+        /// <param name="ventas">La lista de ventas a serializar.</param>
+        /// <returns>true si la serialización y guardado fueron exitosos, de lo contrario false.</returns>
+        /// <exception cref="Exception">Se lanza una excepción si ocurre un error durante la serialización o el guardado.</exception>
         public static bool SerializarEnJson(List<Venta> ventas)
         {
             bool esValido = false;
@@ -37,6 +45,16 @@ namespace Entidades
             return esValido;
         }
 
+        /// <summary>
+        /// Serializa una lista de ventas en formato XML y guarda los datos en un archivo.
+        /// </summary>
+        /// <param name="ventasRealizadas">La lista de ventas a serializar.</param>
+        /// <remarks>
+        /// El método utiliza la clase XmlSerializer para realizar la serialización de la lista de ventas en formato XML.
+        /// Se especifica el tipo de datos a serializar como typeof(List<Venta>).
+        /// A continuación, se crea un FileStream para escribir en el archivo XML especificado.
+        /// Finalmente, se llama al método Serialize del XmlSerializer para escribir los datos serializados en el archivo.
+        /// </remarks>
         public static void SerializarXml(List<Venta> ventasRealizadas)
         {
             // Obtener la ruta del archivo XML
@@ -52,6 +70,6 @@ namespace Entidades
                 serializer.Serialize(fileStream, ventasRealizadas);
             }
         }
-
+        #endregion
     }
 }

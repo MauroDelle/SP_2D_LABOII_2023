@@ -78,7 +78,6 @@ namespace Formularios
 
             Cliente clienteSeleccionado = comboBox1.SelectedItem as Cliente;
 
-            //Vendedor vendedor = new Vendedor();
             bool ventaExitosa = vendedor.Vender(productoSeleccionado, clienteSeleccionado, cantidad, esEfectivo);
 
             if (ventaExitosa)
@@ -124,10 +123,6 @@ namespace Formularios
                 int edadCliente = clienteSeleccionado.Edad;
                 textBox2.Text = edadCliente.ToString();
             }
-        }
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            //MostrarSaldoClienteSeleccionado();
         }
         private void button2_Click(object sender, EventArgs e)
         {
@@ -177,8 +172,6 @@ namespace Formularios
             formHistorial.ShowDialog();
         }
 
-        #endregion
-
         private void CargarProductos()
         {
             List<Producto> productos = Producto.CargarProductos();
@@ -192,58 +185,12 @@ namespace Formularios
             dataGridView1.Columns["TipoCorte"].HeaderText = "Tipo de Corte";
         }
 
-
-        private Producto ObtenerProductoSeleccionado()
-        {
-            if (dataGridView1.SelectedRows.Count > 0)
-            {
-                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
-                Producto producto = selectedRow.DataBoundItem as Producto;
-                return producto;
-            }
-            return null;
-        }
-
         private void CargarClientes()
         {
             List<Cliente> listaClientes = clientes.CargarClientes();
 
             comboBox1.DataSource = listaClientes;
             comboBox1.DisplayMember = "NombreCompleto"; // Propiedad que muestra el nombre completo en el ComboBox
-        }
-
-
-        #region SIN USAR
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-        #endregion
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //if (e.RowIndex >= 0)
-            //{
-            //    DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
-            //    string nombreProducto = row.Cells["Nombre"].Value.ToString();
-            //}
         }
 
         private void nuevoProducto_Click(object sender, EventArgs e)
@@ -257,10 +204,42 @@ namespace Formularios
         {
             CargarProductos();
         }
+        #endregion
 
+        #region SIN USAR
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+        }
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
         private void progressBar_Click(object sender, EventArgs e)
         {
 
         }
+        #endregion
+
     }
 }

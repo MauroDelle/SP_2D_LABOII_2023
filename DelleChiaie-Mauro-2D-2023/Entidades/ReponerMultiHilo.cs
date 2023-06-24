@@ -9,15 +9,35 @@ namespace Entidades
 {
     public class ReponerMultiHilo
     {
-        //public event EventHandler<string>? ProgresoReposicion;
-        //public event EventHandler? ReposicionTerminada;
+        #region ATRIBUTOS
         ProductoDAO productoDAO = new ProductoDAO();
+        #endregion
+
+        #region DELEGATES
         public delegate void ProgresoReposicionEventHandler(int progreso);
         public delegate void ReposicionTerminadaEventHandler();
+        #endregion
 
+        #region EVENTOS
         public event ProgresoReposicionEventHandler? ProgresoReposicion;
         public event ReposicionTerminadaEventHandler? ReposicionTerminada;
+        #endregion
 
+        #region MÉTODO
+
+        /// <summary>
+        /// Realiza la reposición concurrente de productos en base a una lista dada.
+        /// Cada producto que tenga una cantidad de cero será repuesto incrementando su cantidad en intervalos regulares.
+        /// Se utiliza concurrencia para realizar las reposiciones de manera concurrente y mejorar el rendimiento.
+        /// </summary>
+        /// <param name="productos">La lista de productos a reponer.</param>
+        /// <remarks>
+        /// El método utiliza un semáforo para controlar la cantidad máxima de hilos concurrentes que realizan la reposición.
+        /// Cada hilo espera a que haya un espacio disponible en el semáforo para comenzar la reposición de un producto.
+        /// Durante la reposición, se actualiza la cantidad del producto en la base de datos y se notifica el progreso.
+        /// Una vez que se completa la reposición de un producto, se libera un espacio en el semáforo para permitir que otro hilo comience.
+        /// Al finalizar todas las reposiciones, se invoca el evento ReposicionTerminada para notificar que el proceso ha finalizado.
+        /// </remarks>
         public void RealizarReposicionConcurrente(List<Producto> productos)
         {
             ProgresoReposicion?.Invoke(0); // Iniciar progreso en 0
@@ -53,11 +73,12 @@ namespace Entidades
                     tasks.Add(task);
                 }
             }
-
             // Esperar a que todas las tareas de reposición estén completas
             Task.WaitAll(tasks.ToArray());
             // Notificar finalización
             ReposicionTerminada?.Invoke();
         }
+       
+        #endregion
     }
 }
