@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -40,43 +41,52 @@ namespace Entidades
         /// </remarks>
         public void RealizarReposicionConcurrente(List<Producto> productos)
         {
-            ProgresoReposicion?.Invoke(0); // Iniciar progreso en 0
-            // Crear un semáforo para controlar la cantidad máxima de hilos concurrentes
-            SemaphoreSlim semaphore = new SemaphoreSlim(10); // Establece el número máximo de hilos concurrentes aquí
 
-            // Crear una lista para almacenar las tareas de reposición
-            List<Task> tasks = new List<Task>();
+                ProgresoReposicion?.Invoke(0); // Iniciar progreso en 0
+                                               // Crear un semáforo para controlar la cantidad máxima de hilos concurrentes
+                SemaphoreSlim semaphore = new SemaphoreSlim(10); // Establece el número máximo de hilos concurrentes aquí
 
-            foreach (Producto producto in productos)
-            {
-                if (producto.CantidadEnKilos == 0)
+                // Crear una lista para almacenar las tareas de reposición
+                List<Task> tasks = new List<Task>();
+                bool productosEnReposicion = false; // Variable para verificar si se encontraron productos para reponer
+
+                foreach (Producto producto in productos)
                 {
-                    semaphore.Wait(); // Esperar a que haya un espacio disponible en el semáforo
-
-                    // Crear una tarea para reponer el producto
-                    Task task = Task.Run(() =>
+                    if (producto.CantidadEnKilos == 0)
                     {
-                        for (int i = 1; i <= 15; i++)
+                        productosEnReposicion = true; // Hay productos para reponer
+
+                        semaphore.Wait(); // Esperar a que haya un espacio disponible en el semáforo
+
+                        // Crear una tarea para reponer el producto
+                        Task task = Task.Run(() =>
                         {
-                            Thread.Sleep(2000);
-                            producto.CantidadEnKilos = i;
+                            for (int i = 1; i <= 15; i++)
+                            {
+                                Thread.Sleep(2000);
+                                producto.CantidadEnKilos = i;
 
-                            // Actualizar la cantidad en la base de datos
-                            ProductoDAO productoDAO = new ProductoDAO();
-                            productoDAO.ActualizarEnBaseDeDatos(producto);
+                                // Actualizar la cantidad en la base de datos
+                                ProductoDAO productoDAO = new ProductoDAO();
+                                productoDAO.ActualizarEnBaseDeDatos(producto);
 
-                            // Notificar progreso
-                            ProgresoReposicion?.Invoke(i);
-                        }
-                        semaphore.Release(); // Liberar un espacio en el semáforo cuando la tarea esté completa
-                    });
-                    tasks.Add(task);
+                                // Notificar progreso
+                                ProgresoReposicion?.Invoke(i);
+                            }
+                            semaphore.Release(); // Liberar un espacio en el semáforo cuando la tarea esté completa
+                        });
+                        tasks.Add(task);
+                    }
                 }
+            if (!productosEnReposicion)
+            {
+                throw new NoProductosException("No hay productos para reponer.");
             }
-            // Esperar a que todas las tareas de reposición estén completas
             Task.WaitAll(tasks.ToArray());
-            // Notificar finalización
-            ReposicionTerminada?.Invoke();
+                ReposicionTerminada?.Invoke();
+                // Esperar a que todas las tareas de reposición estén completas
+                // Notificar finalización
+
         }
        
         #endregion

@@ -1908,3 +1908,111 @@ Tipo de Corte: Vacuno
 Precio Total: 2000
 
 
+Historial:
+Fecha de Venta: 27/6/2023 15:32:47
+
+Producto: ID: 6
+
+Nombre: Bondiola
+
+Precio por Kilo: 350
+
+Cantidad en Kilos: 0
+
+Tipo de Corte: Cerdo
+
+
+
+Precio Total: 700
+
+
+Historial:
+Fecha de Venta: 27/6/2023 15:49:11
+
+Producto: ID: 7
+
+Nombre: Pechito de Cerdo
+
+Precio por Kilo: 400
+
+Cantidad en Kilos: 0
+
+Tipo de Corte: Cerdo
+
+
+
+Precio Total: 1200
+
+
+Historial:
+Fecha de Venta: 27/6/2023 15:57:51
+
+Producto: ID: 4
+
+Nombre: Matambre
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 0
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 2500
+
+
+Historial:
+Fecha de Venta: 27/6/2023 15:59:01
+
+Producto: ID: 4
+
+Nombre: Matambre
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 0
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 1000
+
+
+Historial:
+Fecha de Venta: 27/6/2023 16:03:05
+
+Producto: ID: 4
+
+Nombre: Matambre
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 0
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 3500
+
+
+Historial:
+Fecha de Venta: 27/6/2023 16:05:01
+
+Producto: ID: 0
+
+Nombre: 
+
+Precio por Kilo: 0
+
+Cantidad en Kilos: 0
+
+Tipo de Corte: 
+
+
+
+Precio Total: 100
+
+

@@ -219,6 +219,7 @@
             Controls.Add(pictureBox1);
             Controls.Add(dataGridView1);
             Controls.Add(pictureBox2);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "frmAgregarCorte";
             Text = "frmAgregarCorte";
             Load += frmAgregarCorte_Load;

@@ -135,10 +135,74 @@ namespace Formularios
             List<Producto> productos = Producto.CargarProductos();
             reponerMultiHilo = new ReponerMultiHilo();
 
+            // Variables para almacenar los valores originales de los controles
+            string labelText = "";
+            bool progressBarVisible = false;
+
+            // Actualizar los controles de la interfaz de usuario mediante Invoke
+            void UpdateUIControls(string newText, bool newVisibility)
+            {
+                if (label1.InvokeRequired)
+                {
+                    label1.Invoke((MethodInvoker)(() => label1.Text = newText));
+                }
+                else
+                {
+                    label1.Text = newText;
+                }
+
+                if (progressBar.InvokeRequired)
+                {
+                    progressBar.Invoke((MethodInvoker)(() => progressBar.Visible = newVisibility));
+                }
+                else
+                {
+                    progressBar.Visible = newVisibility;
+                }
+            }
+
             reponerMultiHilo.ProgresoReposicion += ProgresoReposicionHandler;
             reponerMultiHilo.ReposicionTerminada += ReposicionTerminadaHandler;
 
-            Thread reposicionThread = new Thread(() => reponerMultiHilo.RealizarReposicionConcurrente(productos));
+            Thread reposicionThread = new Thread(() =>
+            {
+                try
+                {
+                    // Almacenar los valores originales de los controles
+                    if (label1.InvokeRequired)
+                    {
+                        labelText = (string)label1.Invoke((Func<string>)(() => label1.Text));
+                    }
+                    else
+                    {
+                        labelText = label1.Text;
+                    }
+
+                    if (progressBar.InvokeRequired)
+                    {
+                        progressBarVisible = (bool)progressBar.Invoke((Func<bool>)(() => progressBar.Visible));
+                    }
+                    else
+                    {
+                        progressBarVisible = progressBar.Visible;
+                    }
+
+                    // Actualizar los controles de la interfaz de usuario
+                    UpdateUIControls("Productos", false);
+
+                    reponerMultiHilo.RealizarReposicionConcurrente(productos);
+                }
+                catch (NoProductosException ex)
+                {
+                    MessageBox.Show("Error!: " + ex.Message);
+                }
+                finally
+                {
+                    // Restaurar los valores originales de los controles
+                    UpdateUIControls(labelText, progressBarVisible);
+                }
+            });
+
             reposicionThread.Start();
         }
 

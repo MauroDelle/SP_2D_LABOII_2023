@@ -110,6 +110,7 @@
             Controls.Add(textBoxHistorial);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmHistorialVenta";
             Text = "frmHistorialVenta";
