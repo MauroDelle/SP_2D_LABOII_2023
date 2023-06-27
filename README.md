@@ -2,19 +2,23 @@
 Repositorio del Segundo Parcial de Laboratorio II
 Mauro Delle chiaie.  Div.2°D
 
-        Los temas aplicados en el siguiente parcial son:   
+        Los temas aplicados en el siguiente parcial son:  
 
-● Clases y métodos estáticos
+        ● Clases y métodos estáticos
+        ● POO
+        ● Sobrecarga
+        ● Winforms
+        ● Colecciones
+        ● Enumerados
 
-● POO
+        
 
-● Sobrecarga
 
-● Winforms
 
-● Colecciones
 
-● Enumerados
+
+
+
 
 ● Encapsulamiento
 
