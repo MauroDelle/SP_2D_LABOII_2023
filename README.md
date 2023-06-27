@@ -1,6 +1,9 @@
-# PP_2D_LABOII_2023
+# SP_2D_LABOII_2023
 Repositorio del Segundo Parcial de Laboratorio II
-Mauro Delle chiaie.  Div.2°D
+
+Mauro Delle chiaie.
+
+Div.2°D
 
         Los temas aplicados en el siguiente parcial son:  
 
