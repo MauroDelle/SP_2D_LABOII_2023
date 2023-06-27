@@ -75,64 +75,29 @@
     "Id": 7
   }
 }
+{
+  "FechaVenta": "2023-06-27T16:31:36.7281916-03:00",
+  "Cantidad": 2.0,
+  "PrecioTotal": 800.0,
+  "Producto": {
+    "Nombre": "Asado de Tira",
+    "PrecioPorKilo": 400.0,
+    "CantidadEnKilos": 7.0,
+    "TipoCorte": "Vacuno",
+    "Id": 19
+  }
+}
 
-{"FechaVenta":"2023-06-23T17:05:30.3561597-03:00","Cantidad":5.0,"PrecioTotal":100.0,"Producto":{"Nombre":null,"PrecioPorKilo":0.0,"CantidadEnKilos":0.0,"TipoCorte":null,"Id":0}}
-
-{"FechaVenta":"2023-06-23T17:05:30.3562861-03:00","Cantidad":3.0,"PrecioTotal":50.0,"Producto":{"Nombre":null,"PrecioPorKilo":0.0,"CantidadEnKilos":0.0,"TipoCorte":null,"Id":0}}
-
-{"FechaVenta":"2023-06-23T17:06:24.7208687-03:00","Cantidad":5.0,"PrecioTotal":100.0,"Producto":{"Nombre":null,"PrecioPorKilo":0.0,"CantidadEnKilos":0.0,"TipoCorte":null,"Id":0}}
-
-{"FechaVenta":"2023-06-23T17:06:24.7209375-03:00","Cantidad":3.0,"PrecioTotal":50.0,"Producto":{"Nombre":null,"PrecioPorKilo":0.0,"CantidadEnKilos":0.0,"TipoCorte":null,"Id":0}}
-
-{"FechaVenta":"2023-06-23T17:07:46.8402589-03:00","Cantidad":5.0,"PrecioTotal":100.0,"Producto":{"Nombre":null,"PrecioPorKilo":0.0,"CantidadEnKilos":0.0,"TipoCorte":null,"Id":0}}
-
-{"FechaVenta":"2023-06-23T17:07:46.8403458-03:00","Cantidad":3.0,"PrecioTotal":50.0,"Producto":{"Nombre":null,"PrecioPorKilo":0.0,"CantidadEnKilos":0.0,"TipoCorte":null,"Id":0}}
-
-{"FechaVenta":"2023-06-23T17:07:52.222212-03:00","Cantidad":5.0,"PrecioTotal":100.0,"Producto":{"Nombre":null,"PrecioPorKilo":0.0,"CantidadEnKilos":0.0,"TipoCorte":null,"Id":0}}
-
-{"FechaVenta":"2023-06-23T17:07:52.222287-03:00","Cantidad":3.0,"PrecioTotal":50.0,"Producto":{"Nombre":null,"PrecioPorKilo":0.0,"CantidadEnKilos":0.0,"TipoCorte":null,"Id":0}}
-
-{"FechaVenta":"2023-06-23T17:09:03.0049563-03:00","Cantidad":5.0,"PrecioTotal":100.0,"Producto":{"Nombre":null,"PrecioPorKilo":0.0,"CantidadEnKilos":0.0,"TipoCorte":null,"Id":0}}
-
-{"FechaVenta":"2023-06-23T17:09:03.0050234-03:00","Cantidad":3.0,"PrecioTotal":50.0,"Producto":{"Nombre":null,"PrecioPorKilo":0.0,"CantidadEnKilos":0.0,"TipoCorte":null,"Id":0}}
-
-{"FechaVenta":"2023-06-23T17:20:57.8360852-03:00","Cantidad":5.0,"PrecioTotal":100.0,"Producto":{"Nombre":null,"PrecioPorKilo":0.0,"CantidadEnKilos":0.0,"TipoCorte":null,"Id":0}}
-
-{"FechaVenta":"2023-06-23T17:20:57.8361514-03:00","Cantidad":3.0,"PrecioTotal":50.0,"Producto":{"Nombre":null,"PrecioPorKilo":0.0,"CantidadEnKilos":0.0,"TipoCorte":null,"Id":0}}
-
-{"FechaVenta":"2023-06-23T17:29:26.0152726-03:00","Cantidad":5.0,"PrecioTotal":100.0,"Producto":{"Nombre":null,"PrecioPorKilo":0.0,"CantidadEnKilos":0.0,"TipoCorte":null,"Id":0}}
-
-{"FechaVenta":"2023-06-23T17:29:26.0153435-03:00","Cantidad":3.0,"PrecioTotal":50.0,"Producto":{"Nombre":null,"PrecioPorKilo":0.0,"CantidadEnKilos":0.0,"TipoCorte":null,"Id":0}}
-
-{"FechaVenta":"2023-06-23T17:30:36.5265608-03:00","Cantidad":5.0,"PrecioTotal":100.0,"Producto":{"Nombre":null,"PrecioPorKilo":0.0,"CantidadEnKilos":0.0,"TipoCorte":null,"Id":0}}
-
-{"FechaVenta":"2023-06-23T17:30:36.5266365-03:00","Cantidad":3.0,"PrecioTotal":50.0,"Producto":{"Nombre":null,"PrecioPorKilo":0.0,"CantidadEnKilos":0.0,"TipoCorte":null,"Id":0}}
-
-{"FechaVenta":"2023-06-23T17:32:15.2759693-03:00","Cantidad":5.0,"PrecioTotal":100.0,"Producto":{"Nombre":null,"PrecioPorKilo":0.0,"CantidadEnKilos":0.0,"TipoCorte":null,"Id":0}}
-
-{"FechaVenta":"2023-06-23T17:32:15.2760594-03:00","Cantidad":3.0,"PrecioTotal":50.0,"Producto":{"Nombre":null,"PrecioPorKilo":0.0,"CantidadEnKilos":0.0,"TipoCorte":null,"Id":0}}
-
-{"FechaVenta":"2023-06-23T17:34:01.3686882-03:00","Cantidad":5.0,"PrecioTotal":100.0,"Producto":{"Nombre":null,"PrecioPorKilo":0.0,"CantidadEnKilos":0.0,"TipoCorte":null,"Id":0}}
-
-{"FechaVenta":"2023-06-23T17:34:01.3687921-03:00","Cantidad":3.0,"PrecioTotal":50.0,"Producto":{"Nombre":null,"PrecioPorKilo":0.0,"CantidadEnKilos":0.0,"TipoCorte":null,"Id":0}}
-
-{"FechaVenta":"2023-06-23T17:35:14.8913825-03:00","Cantidad":5.0,"PrecioTotal":100.0,"Producto":{"Nombre":null,"PrecioPorKilo":0.0,"CantidadEnKilos":0.0,"TipoCorte":null,"Id":0}}
-
-{"FechaVenta":"2023-06-23T17:35:14.8914542-03:00","Cantidad":3.0,"PrecioTotal":50.0,"Producto":{"Nombre":null,"PrecioPorKilo":0.0,"CantidadEnKilos":0.0,"TipoCorte":null,"Id":0}}
-
-{"FechaVenta":"2023-06-24T13:20:04.8541087-03:00","Cantidad":8.0,"PrecioTotal":4200.0,"Producto":{"Nombre":"Asado","PrecioPorKilo":500.0,"CantidadEnKilos":7.0,"TipoCorte":"Vacuno","Id":1}}
-
-{"FechaVenta":"2023-06-24T14:04:43.4377357-03:00","Cantidad":5.0,"PrecioTotal":100.0,"Producto":{"Nombre":null,"PrecioPorKilo":0.0,"CantidadEnKilos":0.0,"TipoCorte":null,"Id":0}}
-
-{"FechaVenta":"2023-06-24T14:04:43.437821-03:00","Cantidad":3.0,"PrecioTotal":50.0,"Producto":{"Nombre":null,"PrecioPorKilo":0.0,"CantidadEnKilos":0.0,"TipoCorte":null,"Id":0}}
-
-{"FechaVenta":"2023-06-24T14:06:26.8198294-03:00","Cantidad":5.0,"PrecioTotal":100.0,"Producto":{"Nombre":null,"PrecioPorKilo":0.0,"CantidadEnKilos":0.0,"TipoCorte":null,"Id":0}}
-
-{"FechaVenta":"2023-06-24T14:06:26.8198985-03:00","Cantidad":3.0,"PrecioTotal":50.0,"Producto":{"Nombre":null,"PrecioPorKilo":0.0,"CantidadEnKilos":0.0,"TipoCorte":null,"Id":0}}
-
-{"FechaVenta":"2023-06-27T14:27:38.110197-03:00","Cantidad":4.0,"PrecioTotal":2000.0,"Producto":{"Nombre":"Asado","PrecioPorKilo":500.0,"CantidadEnKilos":9.0,"TipoCorte":"Vacuno","Id":1}}
-
-{"FechaVenta":"2023-06-27T16:05:01.5578294-03:00","Cantidad":5.0,"PrecioTotal":100.0,"Producto":{"Nombre":null,"PrecioPorKilo":0.0,"CantidadEnKilos":0.0,"TipoCorte":null,"Id":0}}
-
-{"FechaVenta":"2023-06-27T16:05:01.5579223-03:00","Cantidad":3.0,"PrecioTotal":50.0,"Producto":{"Nombre":null,"PrecioPorKilo":0.0,"CantidadEnKilos":0.0,"TipoCorte":null,"Id":0}}
+{
+  "FechaVenta": "2023-06-27T16:31:42.7378056-03:00",
+  "Cantidad": 3.0,
+  "PrecioTotal": 945.0,
+  "Producto": {
+    "Nombre": "Pechito",
+    "PrecioPorKilo": 300.0,
+    "CantidadEnKilos": 9.0,
+    "TipoCorte": "Cerdo",
+    "Id": 24
+  }
+}
 

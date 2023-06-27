@@ -2016,3 +2016,75 @@ Tipo de Corte:
 Precio Total: 100
 
 
+Historial:
+Fecha de Venta: 27/6/2023 16:08:29
+
+Producto: ID: 0
+
+Nombre: 
+
+Precio por Kilo: 0
+
+Cantidad en Kilos: 0
+
+Tipo de Corte: 
+
+
+
+Precio Total: 100
+
+
+Historial:
+Fecha de Venta: 27/6/2023 16:27:58
+
+Producto: ID: 8
+
+Nombre: Chuletas de Cerdo
+
+Precio por Kilo: 380
+
+Cantidad en Kilos: 14
+
+Tipo de Corte: Cerdo
+
+
+
+Precio Total: 304
+
+
+Historial:
+Fecha de Venta: 27/6/2023 16:31:36
+
+Producto: ID: 19
+
+Nombre: Asado de Tira
+
+Precio por Kilo: 400
+
+Cantidad en Kilos: 7
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 800
+
+
+Historial:
+Fecha de Venta: 27/6/2023 16:31:42
+
+Producto: ID: 24
+
+Nombre: Pechito
+
+Precio por Kilo: 300
+
+Cantidad en Kilos: 9
+
+Tipo de Corte: Cerdo
+
+
+
+Precio Total: 945
+
+

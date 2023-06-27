@@ -75,7 +75,7 @@ namespace Formularios
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ocurrió un error al agregar el producto: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ocurrió un error al agregar el producto: ");
             }
         }
 

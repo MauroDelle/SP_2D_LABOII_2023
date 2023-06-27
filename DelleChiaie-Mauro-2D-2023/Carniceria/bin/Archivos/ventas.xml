@@ -56,4 +56,24 @@
       <Id>0</Id>
     </Producto>
   </Venta>
+  <Venta>
+    <FechaVenta>2023-06-27T16:08:29.6198622-03:00</FechaVenta>
+    <Cantidad>5</Cantidad>
+    <PrecioTotal>100</PrecioTotal>
+    <Producto>
+      <PrecioPorKilo>0</PrecioPorKilo>
+      <CantidadEnKilos>0</CantidadEnKilos>
+      <Id>0</Id>
+    </Producto>
+  </Venta>
+  <Venta>
+    <FechaVenta>2023-06-27T16:08:29.6198636-03:00</FechaVenta>
+    <Cantidad>3</Cantidad>
+    <PrecioTotal>50</PrecioTotal>
+    <Producto>
+      <PrecioPorKilo>0</PrecioPorKilo>
+      <CantidadEnKilos>0</CantidadEnKilos>
+      <Id>0</Id>
+    </Producto>
+  </Venta>
 </ArrayOfVenta>
