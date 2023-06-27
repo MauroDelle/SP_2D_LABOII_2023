@@ -63,11 +63,33 @@ namespace Entidades
             // Crear un objeto XmlSerializer para realizar la serialización
             XmlSerializer serializer = new XmlSerializer(typeof(List<Venta>));
 
+            // Crear una lista para almacenar las ventas existentes
+            List<Venta> ventasExistentes;
+
+            // Verificar si el archivo XML ya existe
+            if (File.Exists(rutaArchivo))
+            {
+                // Crear un FileStream para leer el archivo existente
+                using (FileStream fileStream = new FileStream(rutaArchivo, FileMode.Open))
+                {
+                    // Deserializar las ventas existentes
+                    ventasExistentes = (List<Venta>)serializer.Deserialize(fileStream);
+                }
+
+                // Agregar las nuevas ventas a la lista existente
+                ventasExistentes.AddRange(ventasRealizadas);
+            }
+            else
+            {
+                // Si el archivo no existe, utilizar las nuevas ventas como la lista completa
+                ventasExistentes = ventasRealizadas;
+            }
+
             // Crear un FileStream para escribir en el archivo
             using (FileStream fileStream = new FileStream(rutaArchivo, FileMode.Create))
             {
-                // Serializar la lista de ventas y escribir los datos en el archivo
-                serializer.Serialize(fileStream, ventasRealizadas);
+                // Serializar la lista combinada de ventas y escribir los datos en el archivo
+                serializer.Serialize(fileStream, ventasExistentes);
             }
         }
         #endregion

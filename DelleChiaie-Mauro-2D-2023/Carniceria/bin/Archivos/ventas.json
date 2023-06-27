@@ -130,3 +130,5 @@
 
 {"FechaVenta":"2023-06-24T14:06:26.8198985-03:00","Cantidad":3.0,"PrecioTotal":50.0,"Producto":{"Nombre":null,"PrecioPorKilo":0.0,"CantidadEnKilos":0.0,"TipoCorte":null,"Id":0}}
 
+{"FechaVenta":"2023-06-27T14:27:38.110197-03:00","Cantidad":4.0,"PrecioTotal":2000.0,"Producto":{"Nombre":"Asado","PrecioPorKilo":500.0,"CantidadEnKilos":9.0,"TipoCorte":"Vacuno","Id":1}}
+

@@ -21,6 +21,7 @@ namespace Formularios
         private Vendedor vendedor;
         private Cliente clientes;
         private ReponerMultiHilo reponerMultiHilo;
+        private bool descuentoPorJubiladoAplicado = false;
         #endregion
 
         #region CONSTRUCTOR
@@ -82,6 +83,10 @@ namespace Formularios
 
             if (ventaExitosa)
             {
+                if (clienteSeleccionado.Edad > 65)
+                {
+                    MessageBox.Show("Se aplico un descuento por jubilado.");
+                }
                 // Actualizar el saldo en el formulario
                 vendedor.ActualizarSaldoCliente(clienteSeleccionado);
 
@@ -89,11 +94,12 @@ namespace Formularios
                 vendedor.ActualizarCantidadProductoEvent += ActualizarCantidadProducto;
                 MessageBox.Show("Venta Realizada con Exito!");
                 dataGridView1.DataSource = Producto.CargarProductos();
+                // Suscribirse al evento
             }
             else
             {
                 // Mostrar mensaje de saldo insuficiente
-                MessageBox.Show("Saldo insuficiente para realizar la venta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Stock o Saldo Insuficiente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -217,6 +223,7 @@ namespace Formularios
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -241,5 +248,37 @@ namespace Formularios
         }
         #endregion
 
+        private void btnActualizarSaldo_Click(object sender, EventArgs e)
+        {
+            double nuevoSaldo;
+            if (!double.TryParse(textBox1.Text, out nuevoSaldo) || nuevoSaldo <= 0)
+            {
+                MessageBox.Show("Ingrese un valor válido y no negativo para el nuevo saldo.");
+                return;
+            }
+
+            string nombreCliente = comboBox1.SelectedItem.ToString();
+
+            // Utiliza el método ObtenerIdClientePorNombre para obtener el ID del cliente
+            ClienteDAO clienteDAO = new ClienteDAO();
+            int idCliente = clienteDAO.ObtenerIdCLientePorNombre(nombreCliente);
+
+            // Verifica que se haya obtenido un ID válido
+            if (idCliente != -1)
+            {
+                // Utiliza la instancia de ClienteDAO para actualizar el saldo del cliente
+                clienteDAO.ActualizarSaldoCliente(idCliente, nuevoSaldo);
+
+                // Actualiza el valor del textbox con el nuevo saldo
+                textBox1.Text = nuevoSaldo.ToString("C2");
+
+                MessageBox.Show("Saldo actualizado correctamente.");
+                CargarClientes();
+            }
+            else
+            {
+                MessageBox.Show("No se pudo obtener el ID del cliente.");
+            }
+        }
     }
 }

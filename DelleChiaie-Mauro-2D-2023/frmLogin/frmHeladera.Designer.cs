@@ -51,6 +51,7 @@
             nuevoProducto = new Button();
             button3 = new Button();
             progressBar = new ProgressBar();
+            btnActualizarSaldo = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -293,12 +294,23 @@
             progressBar.TabIndex = 24;
             progressBar.Click += progressBar_Click;
             // 
+            // btnActualizarSaldo
+            // 
+            btnActualizarSaldo.Location = new Point(662, 235);
+            btnActualizarSaldo.Name = "btnActualizarSaldo";
+            btnActualizarSaldo.Size = new Size(30, 24);
+            btnActualizarSaldo.TabIndex = 25;
+            btnActualizarSaldo.Text = "Actualizar";
+            btnActualizarSaldo.UseVisualStyleBackColor = true;
+            btnActualizarSaldo.Click += btnActualizarSaldo_Click;
+            // 
             // frmHeladera
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(723, 447);
+            ClientSize = new Size(721, 447);
+            Controls.Add(btnActualizarSaldo);
             Controls.Add(progressBar);
             Controls.Add(button3);
             Controls.Add(nuevoProducto);
@@ -358,5 +370,6 @@
         private Button nuevoProducto;
         private Button button3;
         private ProgressBar progressBar;
+        private Button btnActualizarSaldo;
     }
 }

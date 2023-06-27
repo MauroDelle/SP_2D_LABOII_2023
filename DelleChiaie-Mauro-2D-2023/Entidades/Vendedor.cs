@@ -14,6 +14,7 @@ namespace Entidades
         private List<Venta> historialVentas;
         private DescuentoRecargoDelegate descuentoRecargoDelegate;
         public event Action<Producto> ActualizarCantidadProductoEvent;
+
         #endregion
 
         #region CONSTRUCTORES
@@ -55,9 +56,11 @@ namespace Entidades
         /// <exception cref="Exception">Se lanza una excepción en caso de que ocurra un error durante la venta.</exception>
         public bool Vender(Producto producto, Cliente cliente, int cantidad, bool esEfectivo)
         {
-            try
+            bool retorno = false;
+            bool aplicarDescuentoJubilado = false;
+            if (producto != null && producto.CantidadEnKilos >= cantidad)
             {
-                if (producto != null && producto.CantidadEnKilos >= cantidad)
+                try
                 {
                     double precioTotal = producto.PrecioPorKilo * cantidad;
 
@@ -83,22 +86,23 @@ namespace Entidades
                             ProductoDAO productoDAO = new ProductoDAO();
                             producto.CantidadEnKilos -= cantidad;
                             productoDAO.ActualizarCantidadProducto(producto);
-                            ActualizarCantidadProductoEvent?.Invoke(producto);
+                            //ActualizarCantidadProductoEvent?.Invoke(producto);
                             Venta venta = new Venta(producto, cantidad, montoFinal, DateTime.Now);
                             ArchivoTexto.GuardarHistorialVentaEnTxt(venta, @"C:\Users\delle\OneDrive\Escritorio\PP_2D_LABOII_2023\DelleChiaie-Mauro-2D-2023\Carniceria\bin\Debug\net6.0\historial_ventas.txt");
                             AgregarVenta(venta);
-                            return true; // La venta se realizó correctamente
+                            retorno = true;
                         }
                     }
+
                 }
-                return false; // La venta no se pudo realizar
+                catch (Exception ex)
+                {
+                    // Manejo de la excepción
+                    Console.WriteLine("Saldo Insuficiente: " + ex.Message);
+                }
             }
-            catch (Exception ex)
-            {
-                // Manejo de la excepción
-                Console.WriteLine("Stock Insuficiente: " + ex.Message);
-                return false; // La venta no se pudo realizar debido a un error
-            }
+
+            return retorno;
         }
 
         /// <summary>

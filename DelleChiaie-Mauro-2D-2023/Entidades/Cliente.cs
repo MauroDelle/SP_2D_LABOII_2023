@@ -126,7 +126,6 @@ namespace Entidades
             // Calcular el monto total de la compra
             double montoTotal = CalcularMontoTotal(esPagoConCredito,carritoDeProductos);
 
-
             // Verificar si el cliente tiene suficiente saldo para la compra
             if (montoTotal > Saldo)
             {
@@ -165,7 +164,7 @@ namespace Entidades
             // Actualizar el saldo del cliente
             if (esPagoConCredito)
             {
-                Saldo -= montoTotal * 1.05; // Aplicar un recargo del 5% para pagos con tarjeta de crédito
+                Saldo -= montoTotal; // Aplicar un recargo del 5% para pagos con tarjeta de crédito
             }
             else
             {

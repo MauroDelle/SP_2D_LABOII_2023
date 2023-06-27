@@ -254,3 +254,303 @@ Tipo de Corte: Vacuno
 Cantidad: 2
 Precio Total: 1000
 ---------------
+Fecha de Venta: 25/6/2023 20:19:44
+Producto: ID: 1
+
+Nombre: Asado
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 4
+
+Tipo de Corte: Vacuno
+
+
+Cantidad: 4
+Precio Total: 2000
+---------------
+Fecha de Venta: 25/6/2023 20:20:08
+Producto: ID: 2
+
+Nombre: Bife de Chorizo
+
+Precio por Kilo: 550
+
+Cantidad en Kilos: 1
+
+Tipo de Corte: Vacuno
+
+
+Cantidad: 1
+Precio Total: 550
+---------------
+Fecha de Venta: 25/6/2023 20:21:33
+Producto: ID: 5
+
+Nombre: Tira de Asado
+
+Precio por Kilo: 400
+
+Cantidad en Kilos: 1
+
+Tipo de Corte: Vacuno
+
+
+Cantidad: 1
+Precio Total: 400
+---------------
+Fecha de Venta: 25/6/2023 20:22:54
+Producto: ID: 5
+
+Nombre: Tira de Asado
+
+Precio por Kilo: 400
+
+Cantidad en Kilos: 1
+
+Tipo de Corte: Vacuno
+
+
+Cantidad: 1
+Precio Total: 400
+---------------
+Fecha de Venta: 25/6/2023 20:26:20
+Producto: ID: 5
+
+Nombre: Tira de Asado
+
+Precio por Kilo: 400
+
+Cantidad en Kilos: 1
+
+Tipo de Corte: Vacuno
+
+
+Cantidad: 1
+Precio Total: 400
+---------------
+Fecha de Venta: 25/6/2023 20:27:09
+Producto: ID: 4
+
+Nombre: Matambre
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 2
+
+Tipo de Corte: Vacuno
+
+
+Cantidad: 2
+Precio Total: 1000
+---------------
+Fecha de Venta: 25/6/2023 20:27:43
+Producto: ID: 3
+
+Nombre: Entraña
+
+Precio por Kilo: 600
+
+Cantidad en Kilos: 1
+
+Tipo de Corte: Vacuno
+
+
+Cantidad: 1
+Precio Total: 600
+---------------
+Fecha de Venta: 25/6/2023 20:30:39
+Producto: ID: 4
+
+Nombre: Matambre
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 1
+
+Tipo de Corte: Vacuno
+
+
+Cantidad: 1
+Precio Total: 500
+---------------
+Fecha de Venta: 25/6/2023 20:31:38
+Producto: ID: 1
+
+Nombre: Asado
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 1
+
+Tipo de Corte: Vacuno
+
+
+Cantidad: 1
+Precio Total: 500
+---------------
+Fecha de Venta: 25/6/2023 20:31:38
+Producto: ID: 7
+
+Nombre: Pechito de Cerdo
+
+Precio por Kilo: 400
+
+Cantidad en Kilos: 1
+
+Tipo de Corte: Cerdo
+
+
+Cantidad: 1
+Precio Total: 400
+---------------
+Fecha de Venta: 25/6/2023 20:37:44
+Producto: ID: 1
+
+Nombre: Asado
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 1
+
+Tipo de Corte: Vacuno
+
+
+Cantidad: 1
+Precio Total: 500
+---------------
+Fecha de Venta: 25/6/2023 21:03:51
+Producto: ID: 1
+
+Nombre: Asado
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 3
+
+Tipo de Corte: Vacuno
+
+
+Cantidad: 3
+Precio Total: 1500
+---------------
+Fecha de Venta: 25/6/2023 21:03:51
+Producto: ID: 4
+
+Nombre: Matambre
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 1
+
+Tipo de Corte: Vacuno
+
+
+Cantidad: 1
+Precio Total: 500
+---------------
+Fecha de Venta: 25/6/2023 21:04:24
+Producto: ID: 4
+
+Nombre: Matambre
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 1
+
+Tipo de Corte: Vacuno
+
+
+Cantidad: 1
+Precio Total: 500
+---------------
+Fecha de Venta: 25/6/2023 21:13:14
+Producto: ID: 3
+
+Nombre: Entraña
+
+Precio por Kilo: 600
+
+Cantidad en Kilos: 1
+
+Tipo de Corte: Vacuno
+
+
+Cantidad: 1
+Precio Total: 600
+---------------
+Fecha de Venta: 25/6/2023 21:14:17
+Producto: ID: 12
+
+Nombre: Alitas de Pollo
+
+Precio por Kilo: 200
+
+Cantidad en Kilos: 1
+
+Tipo de Corte: Ave
+
+
+Cantidad: 1
+Precio Total: 200
+---------------
+Fecha de Venta: 27/6/2023 14:29:27
+Producto: ID: 2
+
+Nombre: Bife de Chorizo
+
+Precio por Kilo: 550
+
+Cantidad en Kilos: 1
+
+Tipo de Corte: Vacuno
+
+
+Cantidad: 1
+Precio Total: 550
+---------------
+Fecha de Venta: 27/6/2023 14:30:52
+Producto: ID: 4
+
+Nombre: Matambre
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 2
+
+Tipo de Corte: Vacuno
+
+
+Cantidad: 2
+Precio Total: 1000
+---------------
+Fecha de Venta: 27/6/2023 14:33:53
+Producto: ID: 3
+
+Nombre: Entrania
+
+Precio por Kilo: 800
+
+Cantidad en Kilos: 2
+
+Tipo de Corte: Vacuno
+
+
+Cantidad: 2
+Precio Total: 1600
+---------------
+Fecha de Venta: 27/6/2023 14:34:19
+Producto: ID: 6
+
+Nombre: Bondiola
+
+Precio por Kilo: 350
+
+Cantidad en Kilos: 1
+
+Tipo de Corte: Cerdo
+
+
+Cantidad: 1
+Precio Total: 350
+---------------

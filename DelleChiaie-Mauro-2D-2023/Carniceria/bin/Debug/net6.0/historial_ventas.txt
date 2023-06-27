@@ -1062,3 +1062,849 @@ Tipo de Corte:
 Precio Total: 100
 
 
+Historial:
+Fecha de Venta: 25/6/2023 21:15:33
+
+Producto: ID: 4
+
+Nombre: Matambre
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 0
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 500
+
+
+Historial:
+Fecha de Venta: 27/6/2023 12:40:38
+
+Producto: ID: 1
+
+Nombre: Asado
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 11
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 2000
+
+
+Historial:
+Fecha de Venta: 27/6/2023 12:53:29
+
+Producto: ID: 1
+
+Nombre: Asado
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 7
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 2000
+
+
+Historial:
+Fecha de Venta: 27/6/2023 13:08:51
+
+Producto: ID: 1
+
+Nombre: Asado
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 6
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 400
+
+
+Historial:
+Fecha de Venta: 27/6/2023 13:09:17
+
+Producto: ID: 1
+
+Nombre: Asado
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 4
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 400
+
+
+Historial:
+Fecha de Venta: 27/6/2023 13:09:53
+
+Producto: ID: 1
+
+Nombre: Asado
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 2
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 400
+
+
+Historial:
+Fecha de Venta: 27/6/2023 13:10:43
+
+Producto: ID: 2
+
+Nombre: Bife de Chorizo
+
+Precio por Kilo: 550
+
+Cantidad en Kilos: 13
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 550
+
+
+Historial:
+Fecha de Venta: 27/6/2023 13:14:58
+
+Producto: ID: 6
+
+Nombre: Bondiola
+
+Precio por Kilo: 350
+
+Cantidad en Kilos: 8
+
+Tipo de Corte: Cerdo
+
+
+
+Precio Total: 280
+
+
+Historial:
+Fecha de Venta: 27/6/2023 13:21:21
+
+Producto: ID: 2
+
+Nombre: Bife de Chorizo
+
+Precio por Kilo: 550
+
+Cantidad en Kilos: 11
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 440
+
+
+Historial:
+Fecha de Venta: 27/6/2023 13:23:28
+
+Producto: ID: 3
+
+Nombre: Entrania
+
+Precio por Kilo: 800
+
+Cantidad en Kilos: 3
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 800
+
+
+Historial:
+Fecha de Venta: 27/6/2023 13:26:53
+
+Producto: ID: 2
+
+Nombre: Bife de Chorizo
+
+Precio por Kilo: 550
+
+Cantidad en Kilos: 10
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 550
+
+
+Historial:
+Fecha de Venta: 27/6/2023 13:35:39
+
+Producto: ID: 2
+
+Nombre: Bife de Chorizo
+
+Precio por Kilo: 550
+
+Cantidad en Kilos: 9
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 577,5
+
+
+Historial:
+Fecha de Venta: 27/6/2023 13:36:12
+
+Producto: ID: 2
+
+Nombre: Bife de Chorizo
+
+Precio por Kilo: 550
+
+Cantidad en Kilos: 8
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 440
+
+
+Historial:
+Fecha de Venta: 27/6/2023 13:37:03
+
+Producto: ID: 2
+
+Nombre: Bife de Chorizo
+
+Precio por Kilo: 550
+
+Cantidad en Kilos: 7
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 550
+
+
+Historial:
+Fecha de Venta: 27/6/2023 13:37:14
+
+Producto: ID: 3
+
+Nombre: Entrania
+
+Precio por Kilo: 800
+
+Cantidad en Kilos: 0
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 2400
+
+
+Historial:
+Fecha de Venta: 27/6/2023 13:53:32
+
+Producto: ID: 2
+
+Nombre: Bife de Chorizo
+
+Precio por Kilo: 550
+
+Cantidad en Kilos: 6
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 550
+
+
+Historial:
+Fecha de Venta: 27/6/2023 13:53:48
+
+Producto: ID: 4
+
+Nombre: Matambre
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 13
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 500
+
+
+Historial:
+Fecha de Venta: 27/6/2023 13:54:35
+
+Producto: ID: 2
+
+Nombre: Bife de Chorizo
+
+Precio por Kilo: 550
+
+Cantidad en Kilos: 5
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 440
+
+
+Historial:
+Fecha de Venta: 27/6/2023 13:54:41
+
+Producto: ID: 5
+
+Nombre: Tira de Asado
+
+Precio por Kilo: 400
+
+Cantidad en Kilos: 4
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 400
+
+
+Historial:
+Fecha de Venta: 27/6/2023 13:57:05
+
+Producto: ID: 2
+
+Nombre: Bife de Chorizo
+
+Precio por Kilo: 550
+
+Cantidad en Kilos: 4
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 550
+
+
+Historial:
+Fecha de Venta: 27/6/2023 13:57:12
+
+Producto: ID: 4
+
+Nombre: Matambre
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 11
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 1050
+
+
+Historial:
+Fecha de Venta: 27/6/2023 13:57:20
+
+Producto: ID: 4
+
+Nombre: Matambre
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 10
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 400
+
+
+Historial:
+Fecha de Venta: 27/6/2023 13:57:27
+
+Producto: ID: 4
+
+Nombre: Matambre
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 9
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 400
+
+
+Historial:
+Fecha de Venta: 27/6/2023 13:58:34
+
+Producto: ID: 5
+
+Nombre: Tira de Asado
+
+Precio por Kilo: 400
+
+Cantidad en Kilos: 3
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 320
+
+
+Historial:
+Fecha de Venta: 27/6/2023 14:07:47
+
+Producto: ID: 6
+
+Nombre: Bondiola
+
+Precio por Kilo: 350
+
+Cantidad en Kilos: 7
+
+Tipo de Corte: Cerdo
+
+
+
+Precio Total: 280
+
+
+Historial:
+Fecha de Venta: 27/6/2023 14:08:08
+
+Producto: ID: 2
+
+Nombre: Bife de Chorizo
+
+Precio por Kilo: 550
+
+Cantidad en Kilos: 3
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 550
+
+
+Historial:
+Fecha de Venta: 27/6/2023 14:10:22
+
+Producto: ID: 2
+
+Nombre: Bife de Chorizo
+
+Precio por Kilo: 550
+
+Cantidad en Kilos: 2
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 440
+
+
+Historial:
+Fecha de Venta: 27/6/2023 14:11:30
+
+Producto: ID: 2
+
+Nombre: Bife de Chorizo
+
+Precio por Kilo: 550
+
+Cantidad en Kilos: 1
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 550
+
+
+Historial:
+Fecha de Venta: 27/6/2023 14:12:11
+
+Producto: ID: 6
+
+Nombre: Bondiola
+
+Precio por Kilo: 350
+
+Cantidad en Kilos: 6
+
+Tipo de Corte: Cerdo
+
+
+
+Precio Total: 280
+
+
+Historial:
+Fecha de Venta: 27/6/2023 14:14:49
+
+Producto: ID: 1
+
+Nombre: Asado
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 14
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 500
+
+
+Historial:
+Fecha de Venta: 27/6/2023 14:15:03
+
+Producto: ID: 3
+
+Nombre: Entrania
+
+Precio por Kilo: 800
+
+Cantidad en Kilos: 14
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 840
+
+
+Historial:
+Fecha de Venta: 27/6/2023 14:15:20
+
+Producto: ID: 5
+
+Nombre: Tira de Asado
+
+Precio por Kilo: 400
+
+Cantidad en Kilos: 2
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 320
+
+
+Historial:
+Fecha de Venta: 27/6/2023 14:15:29
+
+Producto: ID: 6
+
+Nombre: Bondiola
+
+Precio por Kilo: 350
+
+Cantidad en Kilos: 5
+
+Tipo de Corte: Cerdo
+
+
+
+Precio Total: 280
+
+
+Historial:
+Fecha de Venta: 27/6/2023 14:17:15
+
+Producto: ID: 1
+
+Nombre: Asado
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 13
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 500
+
+
+Historial:
+Fecha de Venta: 27/6/2023 14:17:20
+
+Producto: ID: 3
+
+Nombre: Entrania
+
+Precio por Kilo: 800
+
+Cantidad en Kilos: 13
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 840
+
+
+Historial:
+Fecha de Venta: 27/6/2023 14:17:30
+
+Producto: ID: 3
+
+Nombre: Entrania
+
+Precio por Kilo: 800
+
+Cantidad en Kilos: 12
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 640
+
+
+Historial:
+Fecha de Venta: 27/6/2023 14:18:05
+
+Producto: ID: 4
+
+Nombre: Matambre
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 8
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 400
+
+
+Historial:
+Fecha de Venta: 27/6/2023 14:18:16
+
+Producto: ID: 5
+
+Nombre: Tira de Asado
+
+Precio por Kilo: 400
+
+Cantidad en Kilos: 1
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 320
+
+
+Historial:
+Fecha de Venta: 27/6/2023 14:18:32
+
+Producto: ID: 5
+
+Nombre: Tira de Asado
+
+Precio por Kilo: 400
+
+Cantidad en Kilos: 0
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 400
+
+
+Historial:
+Fecha de Venta: 27/6/2023 14:18:42
+
+Producto: ID: 7
+
+Nombre: Pechito de Cerdo
+
+Precio por Kilo: 400
+
+Cantidad en Kilos: 5
+
+Tipo de Corte: Cerdo
+
+
+
+Precio Total: 320
+
+
+Historial:
+Fecha de Venta: 27/6/2023 14:21:54
+
+Producto: ID: 3
+
+Nombre: Entrania
+
+Precio por Kilo: 800
+
+Cantidad en Kilos: 11
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 640
+
+
+Historial:
+Fecha de Venta: 27/6/2023 14:22:01
+
+Producto: ID: 6
+
+Nombre: Bondiola
+
+Precio por Kilo: 350
+
+Cantidad en Kilos: 4
+
+Tipo de Corte: Cerdo
+
+
+
+Precio Total: 350
+
+
+Historial:
+Fecha de Venta: 27/6/2023 14:22:08
+
+Producto: ID: 7
+
+Nombre: Pechito de Cerdo
+
+Precio por Kilo: 400
+
+Cantidad en Kilos: 4
+
+Tipo de Corte: Cerdo
+
+
+
+Precio Total: 320
+
+
+Historial:
+Fecha de Venta: 27/6/2023 14:23:35
+
+Producto: ID: 4
+
+Nombre: Matambre
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 7
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 500
+
+
+Historial:
+Fecha de Venta: 27/6/2023 14:23:40
+
+Producto: ID: 7
+
+Nombre: Pechito de Cerdo
+
+Precio por Kilo: 400
+
+Cantidad en Kilos: 3
+
+Tipo de Corte: Cerdo
+
+
+
+Precio Total: 320
+
+
+Historial:
+Fecha de Venta: 27/6/2023 14:23:53
+
+Producto: ID: 6
+
+Nombre: Bondiola
+
+Precio por Kilo: 350
+
+Cantidad en Kilos: 3
+
+Tipo de Corte: Cerdo
+
+
+
+Precio Total: 280
+
+
+Historial:
+Fecha de Venta: 27/6/2023 14:27:38
+
+Producto: ID: 1
+
+Nombre: Asado
+
+Precio por Kilo: 500
+
+Cantidad en Kilos: 9
+
+Tipo de Corte: Vacuno
+
+
+
+Precio Total: 2000
+
+

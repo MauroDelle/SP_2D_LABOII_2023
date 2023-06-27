@@ -252,10 +252,12 @@
             groupBox4.Font = new Font("Bebas Neue", 12F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox4.Location = new Point(763, 11);
             groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(213, 53);
+            groupBox4.Size = new Size(215, 64);
             groupBox4.TabIndex = 26;
             groupBox4.TabStop = false;
             groupBox4.Text = "Presupuesto";
+            groupBox4.Enter += groupBox4_Enter;
+            groupBox4.Validating += groupBox4_Validating;
             // 
             // radioButtonEfectivo
             // 
@@ -292,6 +294,8 @@
             groupBox5.TabIndex = 25;
             groupBox5.TabStop = false;
             groupBox5.Text = "Método de Pago";
+            groupBox5.Enter += groupBox5_Enter;
+            groupBox5.Validating += groupBox5_Validating;
             // 
             // btnComprar
             // 

@@ -22,6 +22,8 @@ namespace Formularios
         public frmReponer()
         {
             InitializeComponent();
+            // Desactivar la edición de celdas en todo el DataGridView
+            dataGridView1.ReadOnly = true;
         }
         #endregion
 

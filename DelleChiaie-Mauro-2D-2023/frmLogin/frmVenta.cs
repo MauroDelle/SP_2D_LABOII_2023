@@ -51,7 +51,6 @@ namespace Formularios
         {
 
         }
-
         private int ObtenerCantidad()
         {
             int cantidad = 0;
@@ -119,10 +118,10 @@ namespace Formularios
         #region FUNCIONES
         private void frmVenta_Load(object sender, EventArgs e)
         {
-
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            cliente.Saldo = 0;
             if (double.TryParse(textBox1.Text, out double montoMaximo) && montoMaximo > 0)
             {
                 cliente.Saldo = montoMaximo;
@@ -132,7 +131,6 @@ namespace Formularios
             {
                 MessageBox.Show("Por favor, ingrese un monto válido mayor que cero.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
         private void button2_Click(object sender, EventArgs e)
         {
@@ -195,36 +193,41 @@ namespace Formularios
 
         private void btnComprar_Click(object sender, EventArgs e)
         {
-            if (!radioButtonCredito.Checked && !radioButtonEfectivo.Checked)
+            try
             {
-                MessageBox.Show("Por favor, seleccione un método de pago.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if (cliente.CarritoDeProductos.Count == 0)
-            {
-                MessageBox.Show("No hay productos en el carrito!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            if (cliente.Saldo < 0)
-            {
-                MessageBox.Show("No ingreso el saldo!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-                try
+                if (!radioButtonCredito.Checked && !radioButtonEfectivo.Checked)
                 {
-                    bool esPagoConCredito = radioButtonCredito.Checked;
-
-                    cliente.RealizarCompra(esPagoConCredito, cliente.CarritoDeProductos);
-                    dgvCarrito.Rows.Clear();
-                    nombresProductosEnCarrito.Clear();
-                    MessageBox.Show("Compra realizada con éxito.");
-                    // Actualizar el valor del TextBox con el nuevo saldo del cliente
-                    textBox1.Text = cliente.Saldo.ToString("C2");
-                    dataGridView1.DataSource = Producto.CargarProductos();
-
+                    MessageBox.Show("Por favor, seleccione un método de pago.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
                 }
-                catch (Exception ex)
+                if (cliente.CarritoDeProductos.Count == 0)
                 {
-                    MessageBox.Show(ex.Message, "Error al realizar la compra", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No hay productos en el carrito!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
                 }
+                if (string.IsNullOrEmpty(textBox1.Text))
+                {
+                    MessageBox.Show("No ingreso el saldo!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                bool esPagoConCredito = radioButtonCredito.Checked;
+
+                cliente.RealizarCompra(esPagoConCredito, cliente.CarritoDeProductos);
+                dgvCarrito.Rows.Clear();
+                nombresProductosEnCarrito.Clear();
+                MessageBox.Show("Compra realizada con éxito.");
+                radioButtonCredito.Checked = false;
+                radioButtonEfectivo.Checked = false;
+                textBox1.Text = cliente.Saldo.ToString("C2");
+                dataGridView1.DataSource = Producto.CargarProductos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error al realizar la compra", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cliente.CarritoDeProductos.Clear();
+                dgvCarrito.Rows.Clear();
+                nombresProductosEnCarrito.Clear();
+            }
         }
 
         private void CargarProductos()
@@ -308,5 +311,36 @@ namespace Formularios
 
         #endregion
 
+        private void groupBox5_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox5_Validating(object sender, CancelEventArgs e)
+        {
+            if (!radioButtonCredito.Checked && !radioButtonEfectivo.Checked)
+            {
+                e.Cancel = true;
+                MessageBox.Show("Por favor, seleccione un método de pago.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                e.Cancel = false;
+            }
+        }
+
+        private void groupBox4_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBox1.Text))
+            {
+                MessageBox.Show("Por favor, ingrese el saldo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Cancel = true; // Cancelar el evento de validación para evitar que se cambie el foco
+            }
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

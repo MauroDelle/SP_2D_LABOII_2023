@@ -8,17 +8,8 @@ namespace Entidades
 {
     public class SqlExceptions : Exception
     {
-        public SqlExceptions()
-        {
-        }
-
-        public SqlExceptions(string message) : base(message)
-        {
-        }
-
         public SqlExceptions(string message, Exception innerException) : base(message, innerException)
         {
         }
-
     }
 }

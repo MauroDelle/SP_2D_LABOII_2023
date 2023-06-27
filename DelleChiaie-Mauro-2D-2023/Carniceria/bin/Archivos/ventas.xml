@@ -1,15 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfVenta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Venta>
-    <FechaVenta>2023-06-24T17:54:29.9092938-03:00</FechaVenta>
+    <FechaVenta>2023-06-27T14:30:52.0949594-03:00</FechaVenta>
     <Cantidad>2</Cantidad>
     <PrecioTotal>1000</PrecioTotal>
     <Producto>
-      <Nombre>Asado</Nombre>
+      <Nombre>Matambre</Nombre>
       <PrecioPorKilo>500</PrecioPorKilo>
       <CantidadEnKilos>2</CantidadEnKilos>
       <TipoCorte>Vacuno</TipoCorte>
-      <Id>1</Id>
+      <Id>4</Id>
+    </Producto>
+  </Venta>
+  <Venta>
+    <FechaVenta>2023-06-27T14:33:53.800656-03:00</FechaVenta>
+    <Cantidad>2</Cantidad>
+    <PrecioTotal>1600</PrecioTotal>
+    <Producto>
+      <Nombre>Entrania</Nombre>
+      <PrecioPorKilo>800</PrecioPorKilo>
+      <CantidadEnKilos>2</CantidadEnKilos>
+      <TipoCorte>Vacuno</TipoCorte>
+      <Id>3</Id>
+    </Producto>
+  </Venta>
+  <Venta>
+    <FechaVenta>2023-06-27T14:34:19.9031878-03:00</FechaVenta>
+    <Cantidad>1</Cantidad>
+    <PrecioTotal>350</PrecioTotal>
+    <Producto>
+      <Nombre>Bondiola</Nombre>
+      <PrecioPorKilo>350</PrecioPorKilo>
+      <CantidadEnKilos>1</CantidadEnKilos>
+      <TipoCorte>Cerdo</TipoCorte>
+      <Id>6</Id>
     </Producto>
   </Venta>
 </ArrayOfVenta>
