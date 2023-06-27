@@ -45,6 +45,8 @@ datos.
 
 ● Métodos de Extensión
 
-Diagrama de Clases:
+-----------------------------------------------------------------------------------------------------------------
+
+--------DIAGRAMA DE CLASES:
 
 ![diagramaCarniceria](https://github.com/MauroDelle/SP_2D_LABOII_2023/assets/78158566/53a3ac45-5b05-40ab-8022-243da50cb108)
