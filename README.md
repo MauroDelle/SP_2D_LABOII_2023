@@ -32,3 +32,14 @@ Div.2°D
         DIAGRAMA DE CLASES:
 
 ![ClassDiagram1](https://github.com/MauroDelle/SP_2D_LABOII_2023/assets/78158566/37797bce-ae4c-4cdf-91d9-e0fbf8a512f7)
+
+
+
+
+         DIAGRAMA DE TABLAS SQL:
+
+         
+
+![DiagramaSQL](https://github.com/MauroDelle/SP_2D_LABOII_2023/assets/78158566/80976e09-513e-4950-8e36-2926307ad9de)
+
+
