@@ -31,4 +31,4 @@ Div.2°D
 
         DIAGRAMA DE CLASES:
 
-![diagramaCarniceria](https://github.com/MauroDelle/SP_2D_LABOII_2023/assets/78158566/53a3ac45-5b05-40ab-8022-243da50cb108)
+![ClassDiagram1](https://github.com/MauroDelle/SP_2D_LABOII_2023/assets/78158566/37797bce-ae4c-4cdf-91d9-e0fbf8a512f7)
